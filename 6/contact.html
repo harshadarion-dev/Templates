@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Unipix University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background: var(--primary);
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .contact-section {
+            padding: 100px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            font-family: var(--font-sans);
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item h5 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar container" style="background:var(--primary);">
+        <div class="logo">
+            <div class="logo-shield"></div>
+            <div class="logo-text" style="color:#fff;">
+                <strong>UNIPIX</strong>
+                <span>UNIVERSITY</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="event.html">Event</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <span class="search-icon" style="color:white;">🔍</span>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+        </div>
+    </div>
+
+    <section class="container contact-section">
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p style="margin-bottom: 30px;">We're here to help and answer any questions you might have. We look forward
+                to hearing from you.</p>
+            <div class="contact-item">
+                <h5>Address</h5>
+                <p>123 University Avenue, Academic City, ST 12345</p>
+            </div>
+            <div class="contact-item">
+                <h5>Email</h5>
+                <p>info@unipix.edu</p>
+            </div>
+            <div class="contact-item">
+                <h5>Phone</h5>
+                <p>+1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <h3 style="margin-bottom: 20px; font-size: 28px; font-family: var(--font-serif);">Send Us a Message</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Subject">
+                <textarea rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn-white"
+                    style="background:var(--primary); color:white; justify-content:center; border:none; padding: 15px;">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo white-logo">
+                    <div class="logo-text"><strong>UNIPIX</strong><span>UNIVERSITY</span></div>
+                </div>
+                <p>Unipix University is one of the world's leading academic institutions.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Our Campus</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Subscribe</h4>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Your Email">
+                    <button class="btn btn-red">↗</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

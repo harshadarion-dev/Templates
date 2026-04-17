@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life | SOSH University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-dots">
+                    <span></span><span></span>
+                    <span></span><span></span>
+                </div>
+                <div class="logo-text">SOSH university</div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="academics.html">Academics</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="life.html">Campus Life</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" style="height: 350px;">
+                <img src="https://picsum.photos/1200/800?random=16"
+                    alt="Campus Life" class="hero-bg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content" style="bottom: 30px;">
+                    <h1 style="font-size: 40px; margin-bottom: 10px;">Campus Life</h1>
+                    <p style="font-size: 16px; opacity: 0.9;">A vibrant ecosystem of clubs, sports, and cultural events.
+                    </p>
+                </div>
+            </section>
+
+            <section class="school-life-section" style="margin-top: 50px;">
+                <div class="news-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="news-card" style="height: 300px;">
+                        <img src="https://picsum.photos/1200/800?random=17"
+                            alt="Sports">
+                        <div class="news-overlay"></div>
+                        <div class="news-content">
+                            <span class="news-category">Athletics</span>
+                            <h3>Swimming & Rowing</h3>
+                            <p>State-of-the-art facilities for training and competing at the highest collegiate levels.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-card" style="height: 300px;">
+                        <img src="https://picsum.photos/1200/800?random=18"
+                            alt="Clubs">
+                        <div class="news-overlay"></div>
+                        <div class="news-content">
+                            <span class="news-category">Student Organizations</span>
+                            <h3>Outdoor Adventures</h3>
+                            <p>Join clubs focused on hiking, kayaking, and experiencing nature outside the classroom.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="school-life-section" style="margin-top: 50px;">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div class="header-left">
+                        <h2>Housing & Dining</h2>
+                        <p>Comfortable living and diverse culinary options.</p>
+                    </div>
+                </div>
+                <div class="features-grid"
+                    style="grid-template-rows: auto; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-card image-card" style="height: 300px;">
+                        <img src="https://picsum.photos/1200/800?random=19"
+                            alt="Dorms">
+                    </div>
+                    <div class="feature-card content-card" style="padding: 40px; justify-content: center;">
+                        <span class="label">Residential Halls</span>
+                        <h2 style="margin-bottom: 15px; margin-top: 10px; font-size: 28px;">A Home Away from Home</h2>
+                        <p style="font-size: 15px;">Over 10 residential halls uniquely designed to foster community,
+                            equipped with modern amenities and 24/7 security. Enjoy meals prepared by award-winning
+                            chefs catering to all dietary needs spanning global cuisines.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-dots" style="grid-template-columns: 8px 8px;">
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                        </div>
+                        <div class="logo-text" style="color: #111;">SOSH university</div>
+                    </div>
+                    <p class="footer-blurb">Empowering future leaders through innovative education and global
+                        perspective.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="life.html">Campus Life</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Student Portal</a>
+                    <a href="#">Library</a>
+                    <a href="#">Alumni</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>123 University Ave</p>
+                    <p>Education City, ED 12345</p>
+                    <p>contact@sosh.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SOSH University. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

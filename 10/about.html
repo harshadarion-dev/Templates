@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SOSH University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-dots">
+                    <span></span><span></span>
+                    <span></span><span></span>
+                </div>
+                <div class="logo-text">SOSH university</div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="academics.html">Academics</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="life.html">Campus Life</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" style="height: 350px;">
+                <img src="https://picsum.photos/1200/800?random=1"
+                    alt="Campus Building" class="hero-bg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content" style="bottom: 30px;">
+                    <h1 style="font-size: 40px; margin-bottom: 10px;">About Us</h1>
+                    <p style="font-size: 16px; opacity: 0.9;">Discover our history, mission, and the community that
+                        makes SOSH unique.</p>
+                </div>
+            </section>
+
+            <section class="features-grid" style="grid-template-rows: auto; grid-template-columns: 1fr;">
+                <div class="feature-card content-card" style="grid-column: 1; padding: 50px;">
+                    <span class="label">Our Mission</span>
+                    <h2 style="margin-top: 15px; margin-bottom: 20px;">Empowering minds for a dynamic future</h2>
+                    <p style="font-size: 16px; max-width: 800px; margin-bottom: 20px;">SOSH University provides a
+                        nurturing environment that fosters academic excellence, innovation, and social responsibility.
+                        Our history dates back decades, continually shaping leaders and inspiring students to pursue
+                        their passions across all disciplines.</p>
+                    <p style="font-size: 16px; max-width: 800px;">We boast a world-class faculty, diverse community, and
+                        unparalleled resources for both undergraduate and graduate learners.</p>
+                </div>
+            </section>
+
+            <section class="school-life-section" style="margin-top: 50px;">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div class="header-left">
+                        <h2>Our Leadership</h2>
+                        <p>Meet the visionaries guiding SOSH University into the future.</p>
+                    </div>
+                </div>
+                <div class="news-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div class="feature-card content-card"
+                        style="padding: 30px; text-align: center; justify-content: flex-start;">
+                        <img src="https://picsum.photos/1200/800?random=2"
+                            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin: 0 auto 20px auto;">
+                        <h3 style="font-size: 20px; color: #111;">Dr. Robert Chen</h3>
+                        <p style="margin-top: 5px; color: #888; font-size: 14px;">University President</p>
+                    </div>
+                    <div class="feature-card content-card"
+                        style="padding: 30px; text-align: center; justify-content: flex-start;">
+                        <img src="https://picsum.photos/1200/800?random=3"
+                            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin: 0 auto 20px auto;">
+                        <h3 style="font-size: 20px; color: #111;">Dr. Sara Jenkins</h3>
+                        <p style="margin-top: 5px; color: #888; font-size: 14px;">Provost</p>
+                    </div>
+                    <div class="feature-card content-card"
+                        style="padding: 30px; text-align: center; justify-content: flex-start;">
+                        <img src="https://picsum.photos/1200/800?random=4"
+                            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin: 0 auto 20px auto;">
+                        <h3 style="font-size: 20px; color: #111;">Prof. Alan Turing</h3>
+                        <p style="margin-top: 5px; color: #888; font-size: 14px;">Dean of Sciences</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-dots" style="grid-template-columns: 8px 8px;">
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                        </div>
+                        <div class="logo-text" style="color: #111;">SOSH university</div>
+                    </div>
+                    <p class="footer-blurb">Empowering future leaders through innovative education and global
+                        perspective.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="life.html">Campus Life</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Student Portal</a>
+                    <a href="#">Library</a>
+                    <a href="#">Alumni</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>123 University Ave</p>
+                    <p>Education City, ED 12345</p>
+                    <p>contact@sosh.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SOSH University. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

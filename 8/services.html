@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Law Firm</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .services-detail {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-img {
+            flex: 1;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-text p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-row,
+            .service-row:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container top-nav">
+            <div class="logo">LOGOUT LIORUP</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html" class="show-mobile">ABOUT US</a>
+                    <a href="services.html" class="active">SERVICES</a>
+                    <a href="attorneys.html" class="show-mobile">ATTORNEYS</a>
+                    <a href="contact.html">CONTACT</a>
+                </nav>
+                <a href="contact.html" class="btn-top">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="mid-banner">
+        <div class="banner-blue">
+            <div class="container banner-inner">
+                <nav class="banner-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="services.html" class="active">SERVICES</a>
+                    <a href="attorneys.html">ATTORNEYS</a>
+                </nav>
+            </div>
+        </div>
+        <div class="banner-gold">
+            <div class="gold-contact">
+                <i class="far fa-envelope"></i>
+                <span>CONTACT</span>
+            </div>
+            <div class="gold-dropdown">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="practice-areas" style="padding: 60px 0 0 0; background-color: var(--white);">
+        <div class="container" style="text-align: center;">
+            <p class="hero-subtitle">WHAT WE DO</p>
+            <h1 class="hero-title" style="margin-bottom: 20px;">Our Legal Practices</h1>
+            <p class="hero-description"
+                style="color: var(--text-dark); max-width: 600px; margin: 0 auto 30px auto; font-size: 16px;">We offer
+                comprehensive legal solutions across an array of disciplines, bringing focus, precision, and relentless
+                advocacy to every case.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services List -->
+    <section class="services-detail">
+        <div class="container">
+
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800"
+                        alt="Criminal Law">
+                </div>
+                <div class="service-text">
+                    <h3>Criminal Defense</h3>
+                    <p>Facing criminal charges can fundamentally disrupt your life. We approach every case with
+                        immediate intervention, rigorous factual investigation, and robust courtroom defense. Our
+                        priority is protecting your constitutional rights and mitigating long-term damages to your
+                        freedom and reputation.</p>
+                    <p>We handle everything from misdemeanors and DUIs to highly complex federal indictments and
+                        white-collar defense.</p>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1533038590840-1c7987cb9e1e?auto=format&fit=crop&q=80&w=800"
+                        alt="Family Law">
+                </div>
+                <div class="service-text">
+                    <h3>Family Law</h3>
+                    <p>Divorce and custody disputes require a delicate balance of aggressive advocacy and profound
+                        emotional intelligence. We mediate where possible and litigate fiercely when necessary.</p>
+                    <p>Our team assists in asset segregation, spousal support, child custody, domestic violence
+                        restraining orders, and prenuptial agreements.</p>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+                        alt="Corporate Law">
+                </div>
+                <div class="service-text">
+                    <h3>Corporate Law</h3>
+                    <p>Protecting a business's structural and financial integrity is critical to its longevity. We
+                        represent startups, mid-market enterprises, and massive public corporations across all
+                        operational litigations.</p>
+                    <p>We draft intricate employment contracts, execute mergers and acquisitions, resolve shareholder
+                        disputes, and guarantee total regulatory compliance.</p>
+                </div>
+            </div>
+
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800"
+                        alt="Real Estate">
+                </div>
+                <div class="service-text">
+                    <h3>Real Estate</h3>
+                    <p>Commercial and residential real estate transactions demand an eagle eye for detail. We step in to
+                        secure your land titles, mitigate zoning disputes, and draft iron-clad lease formulations.</p>
+                    <p>In addition, our litigators defend against foreclosure actions and handle contentious
+                        landlord-tenant relationships efficiently.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4 class="footer-title">CEBLLAW</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Ranting pul</a></li>
+                    <li><a href="#">Commodo</a></li>
+                    <li><a href="#">Aenean Py</a></li>
+                    <li><a href="#">Hoc Liberoam</a></li>
+                    <li><a href="#">Dui Aliquota</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">FCONGE COMM</h4>
+                <p class="footer-text">
+                    Bopopartido Residrai Ventures<br>
+                    Ionest
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">CCORAUL LAWY</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer-address">
+                    <i class="fas fa-map-marker-alt"></i> 34279 MAIN ST. AUSTIN, TEXAS
+                </p>
+                <a href="contact.html" class="btn-footer">CONTACT</a>
+            </div>
+            <div class="footer-col footer-map">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400&h=250"
+                    alt="Location Map">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Unipix University</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background: var(--primary);
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .about-content {
+            padding: 100px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar container nav-container" style="background:var(--primary);">
+        <div class="logo">
+            <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div class="logo-text">
+                <strong>UNIPIX</strong>
+                <span>UNIVERSITY</span>
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="event.html">Event</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+            </span>
+            <label for="menu-toggle" class="hamburger">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>About Unipix</h1>
+            <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+        </div>
+    </div>
+
+    <!-- MAIN ABOUT OVERVIEW -->
+    <section class="about-section container" style="margin-top: 50px;">
+        <div class="about-images">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Campus Building Main" class="about-img-main">
+            <div class="about-badgeCircular">
+                <svg viewBox="0 0 100 100">
+                    <path id="curve-about" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+                        fill="transparent" />
+                    <text>
+                        <textPath href="#curve-about">Explore Full Unipix University • Estd. 1971 •</textPath>
+                    </text>
+                </svg>
+                <div class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                    </svg></div>
+            </div>
+            <img src="https://picsum.photos/id/1053/300/300" alt="Campus Green" class="about-img-small">
+        </div>
+        <div class="about-text">
+            <h2>ABOUT OUR<br>UNIVERSITY UNIPIX</h2>
+            <div class="divider"></div>
+            <p style="margin-bottom:15px;">At University Unipix, we believe in the transformative power of education and
+                the boundless potential within every individual. Established in 1971, we have been dedicated to
+                fostering intellectual curiosity, academic excellence, and a vibrant campus community.</p>
+            <p>Our curriculum is specifically designed to challenge boundaries and cultivate critical thought, ensuring
+                every student operates at their highest potential alongside industry-leading research and comprehensive
+                hands-on practice.</p>
+            <div class="outlined-text" style="margin-top: 30px;">EST. 1971</div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="container" style="padding: 100px 20px; text-align:center;">
+        <h2 style="font-size:36px; margin-bottom:20px;">Our Mission & Vision</h2>
+        <div style="max-width:800px; margin:0 auto; font-size:18px; color:var(--text-light);">
+            <p>At Unipix University, our core mission is to empower the next generation of global leaders through
+                rigorous academic training, innovative research, and a profound commitment to public service.</p>
+            <p style="margin-top:20px;">We envision a future where our robustly trained graduates confidently drive
+                meaningful change across industries, leveraging their Unipix experience to build sustainable, prosperous
+                communities globally.</p>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP QUOTE / MESSAGE -->
+    <section style="background:var(--bg-light); padding:100px 20px; margin-bottom:100px;">
+        <div class="container" style="display:flex; flex-wrap:wrap; gap:60px; align-items:center;">
+            <div style="flex:1; min-width:300px;">
+                <img src="https://picsum.photos/id/1012/600/600" alt="University President"
+                    style="width:100%; border-radius:4px; box-shadow:0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex:1.5; min-width:300px;">
+                <h3
+                    style="font-size:16px; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:10px;">
+                    Message from the President</h3>
+                <h2 style="font-size:32px; font-style:italic; margin-bottom:30px; font-weight:400; line-height:1.4;">
+                    "Education is not just about acquiring facts; it is about training your mind to think clearly,
+                    broadly, and humanely."</h2>
+                <p style="margin-bottom:20px;">Since I assumed office, my priority has been ensuring that Unipix acts as
+                    an incubator for global progress. Our faculty are relentlessly advancing human knowledge, and it is
+                    a tremendous honor to witness our students take the academic foundations built here to remarkable
+                    heights.</p>
+                <div style="font-family:var(--font-serif); font-size:20px; color:var(--text-dark);"><strong>Dr.
+                        Alexander Sterling</strong></div>
+                <div style="font-size:14px; opacity:0.7;">President, Unipix University</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo white-logo">
+                    <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <div class="logo-text"><strong>UNIPIX</strong><span>UNIVERSITY</span></div>
+                </div>
+                <p>Unipix University is one of the world's leading academic institutions.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Our Campus</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Subscribe</h4>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Your Email">
+                    <button class="btn btn-red">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

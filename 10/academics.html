@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | SOSH University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-dots">
+                    <span></span><span></span>
+                    <span></span><span></span>
+                </div>
+                <div class="logo-text">SOSH university</div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="academics.html">Academics</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="life.html">Campus Life</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" style="height: 350px;">
+                <img src="https://picsum.photos/1200/800?random=5"
+                    alt="Library Background" class="hero-bg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content" style="bottom: 30px;">
+                    <h1 style="font-size: 40px; margin-bottom: 10px;">Academics</h1>
+                    <p style="font-size: 16px; opacity: 0.9;">World-class programs to propel your career and intellect.
+                    </p>
+                </div>
+            </section>
+
+            <section class="school-life-section" style="margin-top: 50px;">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div class="header-left">
+                        <h2>Faculties</h2>
+                        <p>Explore our wide array of disciplines taught by leading experts and researchers.</p>
+                    </div>
+                </div>
+                <div class="news-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-card content-card" style="height: 250px;">
+                        <h2>Engineering</h2>
+                        <p style="margin-top: 15px;">Pioneering technology and robust solutions in civil, mechanical,
+                            and software engineering.</p>
+                    </div>
+                    <div class="feature-card content-card" style="height: 250px;">
+                        <h2>Business Arts</h2>
+                        <p style="margin-top: 15px;">Cultivating the next generation of entrepreneurial leaders and
+                            marketing experts.</p>
+                    </div>
+                    <div class="feature-card content-card" style="height: 250px;">
+                        <h2>Medical Sciences</h2>
+                        <p style="margin-top: 15px;">State-of-the-art facilities merging healthcare and humanity for
+                            global well-being.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="school-life-section" style="margin-top: 50px;">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div class="header-left">
+                        <h2>Research & Innovation</h2>
+                        <p>Driving global change through cutting-edge discoveries.</p>
+                    </div>
+                </div>
+                <div class="features-grid"
+                    style="grid-template-rows: auto; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-card image-card" style="height: 300px;">
+                        <img src="https://picsum.photos/1200/800?random=6"
+                            alt="Lab">
+                    </div>
+                    <div class="feature-card content-card" style="padding: 40px; justify-content: center;">
+                        <span class="label">Initiatives</span>
+                        <h2 style="margin-top: 10px; margin-bottom: 15px; font-size: 28px;">Advanced Renewable Energy
+                            Labs</h2>
+                        <p style="font-size: 15px;">Our dedicated teams are heavily invested in finding sustainable
+                            methodologies for a greener tomorrow, partnering with global tech leaders to pioneer modern
+                            solar solutions.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-dots" style="grid-template-columns: 8px 8px;">
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                            <span style="background: #5596d6;"></span><span style="background: #5596d6;"></span>
+                        </div>
+                        <div class="logo-text" style="color: #111;">SOSH university</div>
+                    </div>
+                    <p class="footer-blurb">Empowering future leaders through innovative education and global
+                        perspective.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="life.html">Campus Life</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Student Portal</a>
+                    <a href="#">Library</a>
+                    <a href="#">Alumni</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>123 University Ave</p>
+                    <p>Education City, ED 12345</p>
+                    <p>contact@sosh.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SOSH University. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

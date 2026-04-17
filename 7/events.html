@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Graduate Admissions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="index.html">Student Home</a>
+                <span>Call +44 300 303 0266</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#">English</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="nav-logo-icon">
+                    <path
+                        d="M22 20v-7.826a4 4 0 0 0-1.253-2.908l-7.373-6.968a2 2 0 0 0-2.748 0L3.253 9.266A4 4 0 0 0 2 12.174V20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z" />
+                    <path
+                        d="M10 22v-6.574c0-.654.498-1.205 1.146-1.35 1.139-.255 2.569-.255 3.708 0 .648.145 1.146.696 1.146 1.35V22" />
+                </svg>
+                <span>GradAdmissions</span>
+            </a>
+
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+            <label for="mobile-menu-toggle" class="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Page Header) -->
+    <header class="hero hero-page">
+        <div class="hero-content">
+            <h1>Events</h1>
+            <p>Join us at our upcoming events</p>
+        </div>
+    </header>
+
+    <main class="content-section bg-light page-content">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 20px;">Upcoming Schedule</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; line-height: 1.8; color: #666;">
+                Check back regularly to track special events like our Painting Festival, Science Fairs, Networking Galas
+                and Graduation ceremonies! Keep our robust community thriving by joining in.
+            </p>
+
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 15px;">
+                <div style="display: flex; gap: 15px;">
+                    <select
+                        style="padding: 12px 20px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; color: #555; background: #fff; cursor: pointer;">
+                        <option>All Categories</option>
+                        <option>Academic</option>
+                        <option>Social</option>
+                        <option>Cultural</option>
+                    </select>
+                    <select
+                        style="padding: 12px 20px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; color: #555; background: #fff; cursor: pointer;">
+                        <option>Any Month</option>
+                        <option>October 2024</option>
+                        <option>November 2024</option>
+                        <option>December 2024</option>
+                    </select>
+                </div>
+                <div>
+                    <span style="color: #888; font-size: 14px; font-weight: bold;">Showing 6 upcoming events</span>
+                </div>
+            </div>
+
+            <div class="events-grid" style="margin-bottom: 50px;">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Science Event">
+                        <div class="event-date-badge">
+                            <span class="day">10</span>
+                            <span class="month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Let's Talk Science</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            October 10, 2024 @ 9:00 am
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            24 Wiley Ave, East York
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Painting Festival">
+                        <div class="event-date-badge">
+                            <span class="day">10</span>
+                            <span class="month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Painting Festival</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            October 10, 2024 @ 10:00 am
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            354 Shuter St, Toronto
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Graduation">
+                        <div class="event-date-badge">
+                            <span class="day">22</span>
+                            <span class="month">Nov</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Graduation</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            November 22, 2024 @ 10:00 am
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            24 Wiley Ave, East York
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Additional Event Card 4 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Tech Conference">
+                        <div class="event-date-badge">
+                            <span class="day">05</span>
+                            <span class="month">Dec</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Tech Innovation Conference</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            December 5, 2024 @ 8:00 am
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Main Campus Auditorium
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Additional Event Card 5 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1510515152843-c07a300d6837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Alumni Dinner">
+                        <div class="event-date-badge">
+                            <span class="day">12</span>
+                            <span class="month">Dec</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Annual Alumni Dinner</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            December 12, 2024 @ 7:00 pm
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Grand Hotel Banquet Hall
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Additional Event Card 6 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Career Fair">
+                        <div class="event-date-badge">
+                            <span class="day">18</span>
+                            <span class="month">Jan</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3 style="text-align: left;">Winter Career Fair</h3>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            January 18, 2025 @ 10:00 am
+                        </p>
+                        <p class="event-meta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Student Union Building
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px;">
+                <a href="#"
+                    style="display: inline-block; padding: 15px 40px; border: 2px solid #ddd; background: #fff; border-radius: 4px; color: #555; text-transform: uppercase; font-size: 14px; font-weight: bold; transition: all 0.3s; cursor: pointer;">Load
+                    More Events</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-bottom" style="margin-top:0;">
+            <div class="container text-center">
+                <p>&copy; 2026 Graduate Admissions. All rights reserved. <a href="index.html"
+                        style="color: #fff; margin-left:10px;">Back to Home</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

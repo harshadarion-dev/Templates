@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Law Firm</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .content-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .text-block {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .text-block h2 {
+            font-family: var(--font-serif);
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .text-block h3 {
+            font-family: var(--font-serif);
+            color: var(--primary-gold);
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .text-block p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .features-list li {
+            font-size: 14px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li i {
+            color: var(--primary-gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container top-nav">
+            <div class="logo">LOGOUT LIORUP</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html" class="show-mobile active">ABOUT US</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="attorneys.html" class="show-mobile">ATTORNEYS</a>
+                    <a href="contact.html">CONTACT</a>
+                </nav>
+                <a href="contact.html" class="btn-top">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="mid-banner">
+        <div class="banner-blue">
+            <div class="container banner-inner">
+                <nav class="banner-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html" class="active">ABOUT US</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="attorneys.html">ATTORNEYS</a>
+                </nav>
+            </div>
+        </div>
+        <div class="banner-gold">
+            <div class="gold-contact">
+                <i class="far fa-envelope"></i>
+                <span>CONTACT</span>
+            </div>
+            <div class="gold-dropdown">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="practice-areas" style="padding: 60px 0 30px 0; background-color: var(--bg-light);">
+        <div class="container" style="text-align: center;">
+            <p class="hero-subtitle">LEARN MORE</p>
+            <h1 class="hero-title" style="margin-bottom: 20px;">About Our Firm</h1>
+            <p class="hero-description"
+                style="color: var(--text-dark); max-width: 700px; margin: 0 auto; font-size: 16px;">We are a leading law
+                firm dedicated to protecting your future. Our experienced team works relentlessly to offer cutting-edge
+                legal strategies tailored specifically for you.</p>
+        </div>
+    </section>
+
+    <!-- Expanded Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-block">
+                <h2>Our Mission & Vision</h2>
+                <p>Since our establishment in 1995, OUTINCLLOOO ILAW FIRM has been at the forefront of providing
+                    exceptional legal strategies to clients globally. We strongly believe that justice and
+                    representation should not be convoluted, but rather clear, aggressive, and highly specialized for
+                    your specific case.</p>
+
+                <p>Our vision is to transform the traditional legal practice into a modern, transparent, and wildly
+                    efficient platform. We leverage years of deep industry insights to protect your interests, securing
+                    the finest outcomes for complex litigation, corporate structuring, and familial conflicts.</p>
+
+                <h3>Why Choose Us?</h3>
+                <p>We do not just offer representation; we offer partnerships. When you collaborate with us, you are
+                    engaging with a legacy of unwavering commitment, profound legal acumen, and dynamic perspectives.
+                </p>
+
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Over 30 Years of Combined Experience</li>
+                    <li><i class="fas fa-check-circle"></i> Hundreds of Favorable Verdicts</li>
+                    <li><i class="fas fa-check-circle"></i> Individualized Tailored Approaches</li>
+                    <li><i class="fas fa-check-circle"></i> Aggressive Trial Representation</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Dedicated Client Support</li>
+                    <li><i class="fas fa-check-circle"></i> Transparent Flat-fee Structures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4 class="footer-title">CEBLLAW</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Ranting pul</a></li>
+                    <li><a href="#">Commodo</a></li>
+                    <li><a href="#">Aenean Py</a></li>
+                    <li><a href="#">Hoc Liberoam</a></li>
+                    <li><a href="#">Dui Aliquota</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">FCONGE COMM</h4>
+                <p class="footer-text">
+                    Bopopartido Residrai Ventures<br>
+                    Ionest
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">CCORAUL LAWY</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer-address">
+                    <i class="fas fa-map-marker-alt"></i> 34279 MAIN ST. AUSTIN, TEXAS
+                </p>
+                <a href="contact.html" class="btn-footer">CONTACT</a>
+            </div>
+            <div class="footer-col footer-map">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400&h=250"
+                    alt="Location Map">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
