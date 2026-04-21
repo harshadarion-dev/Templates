@@ -183,9 +183,41 @@
         }
         .btn-primary:hover { background-color: #e6b800; }
 
+        /* FOOTER STYLES */
+        .site-footer { background-color: var(--bg-dark); color: var(--text-light); padding: 80px 0 0 0; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1.5fr; gap: 40px; padding-bottom: 60px; }
+        .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; position: relative; padding-bottom: 10px; font-weight: 600; }
+        .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 30px; height: 2px; background-color: var(--primary-color); }
+        .footer-about p { color: var(--grey-text); margin-bottom: 25px; font-size: 0.95rem; line-height: 1.7; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--grey-text); transition: all 0.3s; display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .footer-links a::before { content: '›'; color: var(--primary-color); font-size: 1.2rem; line-height: 1; }
+        .footer-links a:hover { color: var(--primary-color); transform: translateX(5px); }
+        .footer-contact-item { display: flex; gap: 15px; margin-bottom: 20px; color: var(--grey-text); font-size: 0.95rem; line-height: 1.5; }
+        .footer-contact-item svg { color: var(--primary-color); flex-shrink: 0; margin-top: 3px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 25px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; color: var(--grey-text); }
+        .footer-bottom-links a { margin-left: 20px; transition: color 0.3s; }
+        .footer-bottom-links a:hover { color: var(--primary-color); }
+
+        /* MOBILE MENU TOGGLE */
+        .mobile-menu-btn {
+            display: none; background: transparent; border: none;
+            color: var(--text-light); cursor: pointer; padding: 5px;
+        }
+        .mobile-menu-btn svg { width: 28px; height: 28px; }
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            .top-bar, .nav-links { display: none; }
+                        .top-bar { display: none; }
+            .mobile-menu-btn { display: block; }
+            .main-nav { position: relative; padding: 15px 20px; }
+            .nav-links { display: none; flex-direction: column; position: absolute; z-index: 99; top: 100%; left: 0; right: 0; background: var(--bg-dark); padding: 20px; gap: 15px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+            .nav-links.active { display: flex; }
+            .search-icon { display: none; }
+            .footer-top { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .footer-bottom-links a { margin: 0 10px; }
             .banner-content { grid-template-columns: 1fr; text-align: center; gap: 30px; }
             .hero-text h1 { font-size: 2.8rem; }
             .hero-image-wrapper { justify-content: center; }
@@ -214,13 +246,20 @@
             </div>
         </div>
         <nav class="main-nav">
-            <div class="logo flex-center">
+            <a href="index.html" class="logo flex-center" style="text-decoration: none; color: inherit;">
                 <svg width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 20 L20 5 L35 20" stroke-linecap="round"/>
                     <path d="M10 25 L20 12 L30 25" stroke-linecap="round"/>
                 </svg>
                 ACTURA
-            </div>
+            </a>
+            <button class="mobile-menu-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home +</a></li>
                 <li><a href="pages.html">Pages +</a></li>
@@ -272,7 +311,7 @@
                     <h3>Cosmetic repairs</h3>
                     <span class="price-tag">from $150 / m²</span>
                     <p>Complete surface renewals, painting, wallpapering, and minor interior updates to refresh your living space quickly and efficiently.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="cosmetic-repairs.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -282,7 +321,7 @@
                     <h3>Major repairs</h3>
                     <span class="price-tag">from $270 / m²</span>
                     <p>Deep structural modifications, plumbing replacements, electrical overhauls, and layout changes for older or damaged properties.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="major-repairs.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -292,7 +331,7 @@
                     <h3>House construction</h3>
                     <span class="price-tag">from $540 / m²</span>
                     <p>Full lifecycle building from pouring the foundation to final commissioning. We handle brick, block, and concrete builds.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="house-construction.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -302,7 +341,7 @@
                     <h3>Design project</h3>
                     <span class="price-tag">from $380 / m²</span>
                     <p>Custom architectural blueprints, engineering plans, and highly detailed 3D interior and exterior modeling before construction begins.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="design-project.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -312,7 +351,7 @@
                     <h3>Log house</h3>
                     <span class="price-tag">from $190 / m²</span>
                     <p>Eco-friendly, traditional timber construction utilizing premium woods with modern insulation and sealing techniques.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="log-house.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -322,7 +361,7 @@
                     <h3>Frame house</h3>
                     <span class="price-tag">from $850 / m²</span>
                     <p>Rapid deployment timber-frame housing. Highly energy-efficient, customizable, and perfect for modern residential developments.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="frame-house.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -332,7 +371,7 @@
                     <h3>Garbage disposal</h3>
                     <span class="price-tag">from $100 / m²</span>
                     <p>Post-construction cleanup, hazard removal, and responsible ecological disposal of all building materials and debris.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="garbage-disposal.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
                 <div class="service-card">
@@ -342,7 +381,7 @@
                     <h3>Landscaping</h3>
                     <span class="price-tag">from $200 / m²</span>
                     <p>Exterior design including grading, paving, planting, and hardscape installation to perfectly complement your newly built home.</p>
-                    <a href="#" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    <a href="landscaping.html" class="card-link">Order Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                 </div>
 
             </div>
@@ -353,11 +392,85 @@
         <div class="container">
             <h2>Ready to start your project?</h2>
             <p>We provide a free on-site consultation and a detailed estimate within 48 hours. Let's build your dream home together.</p>
-            <button class="btn-primary flex-center">Get a Free Quote &nbsp; 
+            <button class="btn-primary flex-center" onclick="window.location.href='contact.html'">Get a Free Quote &nbsp; 
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
         </div>
     </section>
 
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="logo flex-center" style="margin-bottom: 20px; font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; text-decoration: none;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="var(--primary-color)" stroke-width="2">
+                            <path d="M5 20 L20 5 L35 20" stroke-linecap="round"/>
+                            <path d="M10 25 L20 12 L30 25" stroke-linecap="round"/>
+                        </svg>
+                        <span style="color: var(--text-light);">ACTURA</span>
+                    </a>
+                    <p>We provide a full range of services for the construction of private houses and cottages since 1995. Quality and reliability are our main priorities.</p>
+                    <div class="social-icons" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--text-light); transition: 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-light)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" style="color: var(--text-light); transition: 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-light)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" style="color: var(--text-light); transition: 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-light)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="portfolio.html">Recent Projects</a></li>
+                        <li><a href="blog.html">Company News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="house-construction.html">House Construction</a></li>
+                        <li><a href="major-repairs.html">Major Repairs</a></li>
+                        <li><a href="design-project.html">Design Project</a></li>
+                        <li><a href="log-house.html">Log Houses</a></li>
+                        <li><a href="cosmetic-repairs.html">Cosmetic Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <div>43-18 97th Pl, Corona,<br>NY 11368, USA</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <div>+1 234 567 89<br>+1 987 654 32</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <div>sales@example.com<br>info@example.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2024 Actura Construction. All rights reserved.</div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

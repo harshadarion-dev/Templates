@@ -72,18 +72,31 @@
             font-weight: 600;
             color: var(--primary);
         }
+
+        @media (max-width: 900px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header class="navbar container" style="background:var(--primary);">
-        <div class="logo">
-            <div class="logo-shield"></div>
-            <div class="logo-text" style="color:#fff;">
+    <header class="navbar container nav-container">
+        <a href="index.html" class="logo">
+            <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div class="logo-text">
                 <strong>UNIPIX</strong>
                 <span>UNIVERSITY</span>
             </div>
-        </div>
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -93,7 +106,20 @@
             <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-actions">
-            <span class="search-icon" style="color:white;">🔍</span>
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+            </span>
+            <span class="lang-selector">ENG</span>
+            <label for="menu-toggle" class="hamburger">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </label>
         </div>
     </header>
 
@@ -139,9 +165,12 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-info">
-                <div class="logo white-logo">
+                <a href="index.html" class="logo white-logo">
+                    <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
                     <div class="logo-text"><strong>UNIPIX</strong><span>UNIVERSITY</span></div>
-                </div>
+                </a>
                 <p>Unipix University is one of the world's leading academic institutions.</p>
             </div>
             <div class="footer-links">
@@ -162,7 +191,13 @@
                 <h4>Subscribe</h4>
                 <div class="subscribe-form">
                     <input type="email" placeholder="Your Email">
-                    <button class="btn btn-red">↗</button>
+                    <button class="btn btn-red">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>

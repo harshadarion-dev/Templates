@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Naturya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__top container">
+            <div class="header__logo">NATURYA</div>
+            <div class="header__search">
+                <input type="text" placeholder="What's are you looking for...">
+                <button aria-label="Search">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header__icons">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+                <div class="cart-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <nav class="nav container">
+                <a href="index.html" class="nav__link">Home <span class="arrow">▾</span></a>
+                <a href="product.html" class="nav__link" style="color: var(--color-accent);">Shop <span
+                        class="arrow">▾</span></a>
+                <a href="pages.html" class="nav__link">Pages <span class="arrow">▾</span></a>
+                <a href="blog.html" class="nav__link">Blog</a>
+                <a href="contact.html" class="nav__link">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=80');">
+            <div class="page-banner__content">
+                <h1 class="page-banner__title">All Products</h1>
+                <div class="page-banner__breadcrumbs">
+                    <a href="index.html">Home</a> <span class="sep">/</span> <span class="current">Shop</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="shop-layout">
+
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-widget__title">Categories</h4>
+                        <ul class="filter-list">
+                            <li><a href="#">Sofas (12)</a></li>
+                            <li><a href="#">Chairs (24)</a></li>
+                            <li><a href="#">Tables (8)</a></li>
+                            <li><a href="#">Storage (15)</a></li>
+                            <li><a href="#">Beds (5)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-widget__title">Material</h4>
+                        <ul class="filter-list">
+                            <li><a href="#">Oak Wood</a></li>
+                            <li><a href="#">Ash Wood</a></li>
+                            <li><a href="#">Walnut</a></li>
+                            <li><a href="#">Linen</a></li>
+                            <li><a href="#">Velvet</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="main-content">
+                    <div class="products__grid" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1506439014298-5fe9c19b45db?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Timber Chair</h4>
+                                <div class="product-card__price">$450.00</div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <span class="product-card__badge">-25%</span>
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Hugh II Accent Chair</h4>
+                                <div class="product-card__price"><span class="price-old">$800.00</span> $600.00</div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1519947486511-46149fa0a254?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Kosi Swivel Chair</h4>
+                                <div class="product-card__price">$400.00</div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1581539250439-c966898956d3?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Catalina Accent Chair</h4>
+                                <div class="product-card__price">$500.00</div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Matte Black Table</h4>
+                                <div class="product-card__price">$180.00</div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <div class="product-card__image"
+                                    style="background-image: url('https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=600&q=80');">
+                                </div>
+                                <button class="product-card__favorite">♡</button>
+                            </div>
+                            <div class="product-card__info">
+                                <h4 class="product-card__title">Charcoal Sofa</h4>
+                                <div class="product-card__price">$1200.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">NATURYA</div>
+                <p class="footer__desc">Minimalist wooden furniture crafted for timeless elegance. Bring nature and
+                    comfort into your modern home.</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook">Fb</a>
+                    <a href="#" aria-label="Twitter">Tw</a>
+                    <a href="#" aria-label="Instagram">Ig</a>
+                    <a href="#" aria-label="Pinterest">Pt</a>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                <h4 class="footer__title">Shop</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Sofas & Chairs</a></li>
+                    <li><a href="#">Tables & Desks</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__links">
+                <h4 class="footer__title">Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="pages.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__newsletter">
+                <h4 class="footer__title">Newsletter</h4>
+                <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p class="footer__copyright">&copy; 2026 Naturya. All rights reserved.</p>
+            <div class="footer__payments">
+                <span>Visa</span>
+                <span>MasterCard</span>
+                <span>PayPal</span>
+                <span>Amex</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

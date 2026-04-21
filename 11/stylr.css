@@ -1,0 +1,2 @@
+/* This is linking styles.css to ensure stylr.css works if its used by default */
+@import url('./styles.css');

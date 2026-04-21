@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Science Fair - Unipix University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background: var(--primary);
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .details-section {
+            padding: 100px 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .content-main img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .content-main h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content-main p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .sidebar {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 4px;
+            align-self: start;
+        }
+
+        .sidebar h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .details-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar container nav-container">
+        <a href="index.html" class="logo">
+            <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div class="logo-text"><strong>UNIPIX</strong><span>UNIVERSITY</span></div>
+        </a>
+        <input type="checkbox" id="menu-toggle">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="event.html">Event</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <span class="search-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg></span>
+            <span class="lang-selector">ENG</span>
+            <label for="menu-toggle" class="hamburger"><svg viewBox="0 0 24 24" width="24" height="24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg></label>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Event Details</h1>
+            <div class="breadcrumb"><a href="index.html">Home</a> / <a href="event.html">Events</a> / Annual Science
+                Fair</div>
+        </div>
+    </div>
+
+    <section class="container details-section">
+        <div class="content-main">
+            <img src="https://picsum.photos/id/12/800/400" alt="Event Image">
+            <h2>Annual Science Fair</h2>
+            <p>The largest exhibition of undergraduate research projects in physics and chemistry. Discover
+                revolutionary ideas proposed by our science department's brightest young minds.</p>
+            <p>Join us as we explore new horizons in sustainable energy, complex molecular structures, and astrophysical
+                phenomenons. The top 5 projects will be awarded research grants by external sponsors.</p>
+        </div>
+        <div class="sidebar">
+            <h3>Event Information</h3>
+            <ul class="info-list">
+                <li><strong>Date:</strong> Nov 05, 2024</li>
+                <li><strong>Time:</strong> 10:00 AM - 04:00 PM</li>
+                <li><strong>Location:</strong> Science Building Atrium</li>
+                <li><strong>Tickets:</strong> Free Entry</li>
+            </ul>
+            <a href="contact.html" class="btn btn-red"
+                style="width: 100%; margin-top: 30px; border-radius: 4px; padding: 15px; justify-content:center;">Contact
+                to RSVP</a>
+        </div>
+    </section>
+
+        <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo white-logo">
+                    <svg width="24" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <div class="logo-text"><strong>UNIPIX</strong><span>UNIVERSITY</span></div>
+                </a>
+                <p>Unipix University is one of the world's leading academic institutions.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Our Campus</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Subscribe</h4>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Your Email">
+                    <button class="btn btn-red">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

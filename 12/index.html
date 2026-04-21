@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homedokan - Organic Food eCommerce</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="contact-info">
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    (00) 873 234 34 82
+                </span>
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    info@homedokan.com
+                </span>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>All Categories</option>
+                </select>
+                <input type="text" placeholder="Search...">
+                <button aria-label="Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="top-actions">
+                <a href="#">My Account</a>
+                <select>
+                    <option>USD</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" style="text-decoration:none;">
+                <span class="logo-home">HOME</span><span class="logo-dokan">DOKAN</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav class="main-nav">
+                <a href="grocery.html">Grocery Items</a>
+                <a href="meats.html">Meats</a>
+                <a href="dry-foods.html" >Dry Foods</a>
+                <a href="best-deals.html">Best deals</a>
+                <a href="products.html">All Products</a>
+                <a href="pages.html">Pages</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <div class="user-actions">
+                <a href="profile.html" class="icon-link">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="track.html" class="icon-link badge-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    <span class="badge">0</span>
+                </a>
+                <a href="cart.html" class="icon-link badge-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-shape"></div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <span class="hero-subtitle">GET SAVE 20% OFF</span>
+                <h1 class="hero-title">Farm Fresh Organic <br><span class="text-green">Vegetables.</span></h1>
+                <p class="hero-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                <a href="#" class="btn btn-primary">Shop Collection &rarr;</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800"
+                    alt="Fresh Vegetables">
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banners -->
+    <section class="banners container">
+        <div class="banner-card light-green has-bg-img"
+            style="background-image: url('https://images.unsplash.com/photo-1575853121743-60c24f0a7502?auto=format&fit=crop&q=80&w=400'); background-size: cover;">
+            <div class="banner-overlay"></div>
+            <div class="banner-content relative z-10">
+                <span class="banner-subtitle">Fresh & Healthy</span>
+                <h3 class="banner-title text-green">VEGETABLES</h3>
+                <a href="#" class="btn btn-dark">Shop Now &rarr;</a>
+            </div>
+            <div class="circle-badge relative z-10">20%<br>OFF</div>
+        </div>
+        <div class="banner-card light-orange has-bg-img"
+            style="background-image: url('https://images.unsplash.com/photo-1506484381205-f7945653044d?auto=format&fit=crop&q=80&w=400'); background-size: cover;">
+            <div class="banner-overlay"></div>
+            <div class="banner-content relative z-10">
+                <span class="banner-subtitle">Fresh & Healthy</span>
+                <h3 class="banner-title text-orange">VEGETABLES</h3>
+                <a href="#" class="btn btn-dark">Shop Now &rarr;</a>
+            </div>
+            <div class="circle-badge relative z-10">20%<br>OFF</div>
+        </div>
+        <div class="banner-card light-green has-bg-img"
+            style="background-image: url('https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=400'); background-size: cover;">
+            <div class="banner-overlay"></div>
+            <div class="banner-content relative z-10">
+                <span class="banner-subtitle">Fresh & Healthy</span>
+                <h3 class="banner-title text-green">VEGETABLES</h3>
+                <a href="#" class="btn btn-dark">Shop Now &rarr;</a>
+            </div>
+            <div class="circle-badge relative z-10">20%<br>OFF</div>
+        </div>
+    </section>
+
+    <!-- Top Categories -->
+    <section class="top-categories container">
+        <div class="section-header">
+            <span class="section-subtitle">Categories</span>
+            <h2>Top Categories</h2>
+            <div class="nav-arrows">
+                <button>&lt;</button>
+                <button class="active">&gt;</button>
+            </div>
+        </div>
+        <div class="categories-grid" data-watermark="SUPREO">
+            <div class="category-card">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg></div>
+                <h4>Vegetable</h4>
+                <span>14 Items</span>
+            </div>
+            <div class="category-card">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg></div>
+                <h4>Coffee & Drinks</h4>
+                <span>14 Items</span>
+            </div>
+            <div class="category-card active">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M7.5 4.5l9 9"></path>
+                        <path
+                            d="M12.5 1.5a4 4 0 0 1 5.5 0l4.5 4.5a4 4 0 0 1 0 5.5l-9 9a4 4 0 0 1-5.5 0L3.5 16a4 4 0 0 1 0-5.5l9-9z">
+                        </path>
+                    </svg></div>
+                <h4>Meat</h4>
+                <span>14 Items</span>
+            </div>
+            <div class="category-card">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                    </svg></div>
+                <h4>Milk & Dairy</h4>
+                <span>14 Items</span>
+            </div>
+            <div class="category-card">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"></path>
+                    </svg></div>
+                <h4>Fresh Fruits</h4>
+                <span>14 Items</span>
+            </div>
+            <div class="category-card">
+                <div class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                        <path d="M2 12h20"></path>
+                    </svg></div>
+                <h4>Cleaning Essential</h4>
+                <span>14 Items</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Products Area -->
+    <section class="main-products container">
+        <aside class="sidebar">
+            <div class="sidebar-categories">
+                <h3>Featured Products</h3>
+                <ul>
+                    <li>Cake & Pastry</li>
+                    <li class="active">Bread & Bakery</li>
+                    <li>Snacks</li>
+                    <li>Dairy</li>
+                    <li>Confectionery</li>
+                    <li>Popular Items</li>
+                    <li>Chocolate & Candy</li>
+                    <li>Beverage</li>
+                </ul>
+                <a href="#" class="btn btn-primary small-btn" style="margin-top: 15px;">Shop Now &rarr;</a>
+            </div>
+
+            <div class="sidebar-promo">
+                <span class="promo-subtitle">Enjoy up to 50%</span>
+                <h3>Fresh Vegetable</h3>
+                <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+            </div>
+        </aside>
+
+        <div class="products-content">
+            <div class="products-tabs">
+                <a href="#" class="active">Featured</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Popular</a>
+                <div class="nav-arrows tab-arrows hidden-mobile">
+                    <button>&lt;</button>
+                    <button class="active">&gt;</button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&q=80&w=300"
+                            alt="Organic Tomato" class="circle-img">
+                        <div class="hover-actions">
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg></button>
+                            <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg></button>
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Organic Tomato</h4>
+                        <div class="price">
+                            <span class="old-price">$50.00</span>
+                            <span class="new-price">$100.00</span>
+                            <span class="rating">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                    stroke-width="1">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.5k
+                            </span>
+                        </div>
+                        <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=300"
+                            alt="Vegan Egg Replacer" class="circle-img">
+                        <div class="hover-actions-visible">
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg></button>
+                            <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg></button>
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Vegan Egg Replacer</h4>
+                        <div class="price">
+                            <span class="old-price">$50.00</span>
+                            <span class="new-price">$100.00</span>
+                            <span class="rating">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                    stroke-width="1">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.5k
+                            </span>
+                        </div>
+                        <a href="product-single.html" class="btn btn-orange small-btn">Shop Now &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&q=80&w=300"
+                            alt="Strawberry Vanilla" class="circle-img">
+                        <div class="hover-actions">
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg></button>
+                            <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg></button>
+                            <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Strawberry Vanilla</h4>
+                        <div class="price">
+                            <span class="old-price">$50.00</span>
+                            <span class="new-price">$100.00</span>
+                            <span class="rating">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                    stroke-width="1">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.5k
+                            </span>
+                        </div>
+                        <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wide-banner">
+                <div class="wide-banner-content">
+                    <span class="banner-subtitle">Enjoy up to 50% Off Products</span>
+                    <h2>All Tasted Organic & <br>Fresh Products</h2>
+                    <a href="#" class="btn btn-primary">Shop Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal Of The Week -->
+    <section class="deal-of-the-week container">
+        <div class="section-header center">
+            <span class="section-subtitle">Best Deal</span>
+            <h2>Deal Of The Week</h2>
+        </div>
+        <div class="deal-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&q=80&w=300"
+                        alt="Papaya" class="circle-img">
+                    <div class="hover-actions">
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg></button>
+                        <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg></button>
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Papaya</h4>
+                    <div class="price">
+                        <span class="old-price">$50.00</span>
+                        <span class="new-price">$100.00</span>
+                        <span class="rating">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                stroke-width="1">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            4.5k
+                        </span>
+                    </div>
+                    <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+                </div>
+            </div>
+            <div class="product-card hover-active">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=300"
+                        alt="Green Peas" class="circle-img">
+                    <div class="hover-actions-visible">
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg></button>
+                        <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg></button>
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Green Peas</h4>
+                    <div class="price">
+                        <span class="old-price">$50.00</span>
+                        <span class="new-price">$100.00</span>
+                        <span class="rating">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                stroke-width="1">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            4.5k
+                        </span>
+                    </div>
+                    <a href="product-single.html" class="btn btn-orange small-btn">Shop Now &rarr;</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&q=80&w=300"
+                        alt="Tomato Sauce" class="circle-img">
+                    <div class="hover-actions">
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg></button>
+                        <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg></button>
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Tomato Sauce</h4>
+                    <div class="price">
+                        <span class="old-price">$50.00</span>
+                        <span class="new-price">$100.00</span>
+                        <span class="rating">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                stroke-width="1">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            4.5k
+                        </span>
+                    </div>
+                    <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=300"
+                        alt="Tea Bag" class="circle-img">
+                    <div class="hover-actions">
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg></button>
+                        <button class="add-to-cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg></button>
+                        <button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Tea Bag</h4>
+                    <div class="price">
+                        <span class="old-price">$50.00</span>
+                        <span class="new-price">$100.00</span>
+                        <span class="rating">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"
+                                stroke-width="1">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            4.5k
+                        </span>
+                    </div>
+                    <a href="product-single.html" class="btn btn-primary small-btn">Shop Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-widget">
+                <a href="index.html" class="logo footer-logo" style="text-decoration:none;">
+                    <span class="logo-home">HOME</span><span class="logo-dokan" style="color: #fff;">DOKAN</span>
+                </a>
+                <p>We provide the best organic fresh foods directly from farms.</p>
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Fresh Fruits</a></li>
+                    <li><a href="#">Meat & Dairy</a></li>
+                    <li><a href="#">Bakery</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates on daily deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Homedokan. All rights reserved.</p>
+                <div class="payment-icons">
+                    <!-- Placeholder generic payment icons -->
+                    <svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    <svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
