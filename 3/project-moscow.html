@@ -122,10 +122,7 @@
         }
 
         /* Project Details Specific */
-        .project-hero {
-            margin-bottom: 3rem;
-            height: 500px;
-        }
+        
 
         .project-header {
             margin-bottom: 2rem;
@@ -324,9 +321,7 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .project-hero {
-                height: 400px;
-            }
+            
         }
 
         /* Mobile Navigation Toggle */
@@ -363,16 +358,141 @@
                 text-align: center;
             }
 
-            .project-hero {
-                height: 300px;
-            }
+            
 
             .project-meta-bar {
                 flex-direction: column;
                 gap: 1rem;
             }
         }
-    </style>
+    
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: var(--transition);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            color: #fff;
+        }
+        .whatsapp-float svg {
+            fill: currentColor;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.6rem;
+            }
+            .whatsapp-float span {
+                display: none;
+            }
+        }
+
+
+        /* Carousel Specific Styles */
+        .project-hero {
+            position: relative;
+            margin-bottom: 3rem;
+            height: 500px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+        }
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        .carousel-track img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            display: block;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .carousel-btn:hover { background: rgba(0,0,0,0.8); }
+        .carousel-btn.prev { left: 1rem; }
+        .carousel-btn.next { right: 1rem; }
+        .carousel-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+
+        /* Lightbox Styles */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .lightbox-modal.show .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2010;
+        }
+        .carousel-track img {
+            cursor: pointer;
+        }
+
+</style>
 </head>
 
 <body>
@@ -380,7 +500,7 @@
     <header>
         <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Real Estate
+            Darion Homes
         </a>
         
         <button class="mobile-toggle" aria-label="Toggle Menu">
@@ -404,8 +524,18 @@
         </div>
 
         <div class="project-hero">
-            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80"
+            <div class="carousel-track">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80"
                 alt="The Concrete Manor">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 2">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 3">
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Next image">
+                <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+            </button>
         </div>
 
         <div class="project-meta-bar">
@@ -470,7 +600,7 @@
             <div class="footer-brand">
                 <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Real Estate
+            Darion Homes
         </a>
                 <p>We build warm, reliable, and affordable concrete homes for your family's comfortable life. Quality
                     guaranteed from foundation to roof.</p>
@@ -542,8 +672,72 @@
                     nav.classList.toggle('nav-open');
                 });
             }
+
+            // Carousel logic
+            const track = document.querySelector('.carousel-track');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            if (track && prevBtn && nextBtn) {
+                let currentIndex = 0;
+                const images = track.querySelectorAll('img');
+                
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                });
+            }
+
+            // Lightbox logic
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            if (lightbox) {
+                const closeBtn = document.querySelector('.lightbox-close');
+                
+                // Add click event to all carousel images
+                document.querySelectorAll('.carousel-track img').forEach(img => {
+                    img.addEventListener('click', () => {
+                        lightboxImg.src = img.src;
+                        lightbox.classList.add('show');
+                        document.body.style.overflow = 'hidden'; // prevent scrolling
+                    });
+                });
+                
+                const closeLightbox = () => {
+                    lightbox.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                };
+                
+                closeBtn.addEventListener('click', closeLightbox);
+                lightbox.addEventListener('click', (e) => {
+                    if(e.target === lightbox) closeLightbox();
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if(e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+                });
+            }
         });
     </script>
+
+    <a href="https://wa.me/7702856454" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span>Get a Quote</span>
+    </a>
+
+
+    <!-- Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+
 </body>
 
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actura - Construction Blog & News</title>
+    <title>Actura - Maximizing Space in Small Urban Lots</title>
     <style>
-        /* RESET & GLOBAL STYLES (Actura Design System) */
+        /* RESET & GLOBAL STYLES */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
@@ -28,7 +28,7 @@
         }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
         svg { display: block; }
         .flex-center { display: flex; align-items: center; gap: 8px; }
 
@@ -51,14 +51,15 @@
         .search-icon { cursor: pointer; transition: color 0.3s; }
         .search-icon:hover { color: var(--primary-color); }
 
-        /* PAGE BANNER - UPDATED TO SPLIT LAYOUT WITH IMAGE */
+        /* INNER PAGE BANNER - WITH SPLIT LAYOUT */
         .page-banner {
             position: relative; 
             padding: 160px 0 100px 0; 
             background-color: var(--bg-dark);
-            background-image: url('https://picsum.photos/id/1040/1920/800'); 
+            background-image: url('https://picsum.photos/id/531/1920/800'); 
             background-size: cover; background-position: center; 
             display: flex; align-items: center; justify-content: center;
+            margin-bottom: 80px;
         }
 
         .banner-overlay {
@@ -96,120 +97,49 @@
             border-radius: 8px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.6);
             border: 4px solid var(--primary-color);
-            background-color: #333;
+            background-color: #333; 
             min-height: 300px; 
         }
 
-        /* BLOG LAYOUT */
-        .blog-section { padding: 100px 0; }
-        .blog-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; }
+        /* PAGE CONTENT LAYOUT */
+        .page-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; padding-bottom: 100px; }
 
-        /* MAIN FEED (LEFT) */
-        .post-card {
-            background-color: var(--text-light);
-            border: 1px solid var(--border-color);
-            margin-bottom: 50px;
-            transition: box-shadow 0.3s ease;
-        }
-        .post-card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
-
-        .post-image-link { display: block; overflow: hidden; position: relative; }
-        .post-image { width: 100%; height: 400px; object-fit: cover; transition: transform 0.6s ease; display: block; }
-        .post-card:hover .post-image { transform: scale(1.05); }
+        /* MAIN CONTENT AREA */
+        .main-content h2 { font-size: 2.2rem; margin-bottom: 20px; font-weight: 700; }
+        .quote-line { width: 4px; height: 30px; background-color: var(--primary-color); margin-bottom: 20px; }
+        .main-content p { color: var(--grey-text); margin-bottom: 20px; font-size: 1.05rem; }
+        .content-image { width: 100%; height: auto; margin: 30px 0; border: 1px solid #eee; background-color: #f4f4f4; }
         
-        .date-badge {
-            position: absolute; top: 20px; left: 20px; background-color: var(--primary-color);
-            color: var(--text-dark); padding: 10px 15px; text-align: center; font-weight: bold;
-        }
-        .date-badge span { display: block; font-size: 1.5rem; line-height: 1; }
-        .date-badge small { font-size: 0.8rem; text-transform: uppercase; }
+        .feature-list { list-style: none; margin: 30px 0; }
+        .feature-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--text-dark); font-weight: 600; }
+        .list-icon { color: var(--primary-color); }
 
-        .post-content { padding: 40px; }
+        /* SIDEBAR WIDGETS */
+        .sidebar-widget { background-color: var(--bg-light); padding: 40px 30px; margin-bottom: 40px; border: 1px solid var(--border-color); }
+        .sidebar-widget h3 { font-size: 1.2rem; margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
         
-        .post-meta {
-            display: flex; gap: 20px; color: var(--grey-text); font-size: 0.85rem; margin-bottom: 15px; font-weight: 600;
-        }
-        .post-meta span { display: flex; align-items: center; gap: 5px; }
-        .post-meta svg { color: var(--primary-color); }
-
-        .post-title { font-size: 1.8rem; margin-bottom: 15px; line-height: 1.3; }
-        .post-title a:hover { color: var(--primary-color); }
+        .service-links { list-style: none; }
+        .service-links li { margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px; }
+        .service-links li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
         
-        .post-excerpt { color: var(--grey-text); margin-bottom: 30px; font-size: 1.05rem; }
+        .accordion-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; color: var(--grey-text); font-size: 0.95rem; font-family: inherit; cursor: pointer; padding: 5px 0; transition: color 0.3s; }
+        .accordion-btn:hover, .accordion-btn.active { color: var(--primary-color); font-weight: bold; }
+        .accordion-btn span { font-size: 1.2rem; transition: transform 0.3s ease; }
+        .accordion-btn.active span { transform: rotate(45deg); }
 
-        .btn-read-more {
-            font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;
-            text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); border-bottom: 2px solid var(--primary-color); padding-bottom: 3px;
-        }
-        .btn-read-more svg { transition: transform 0.3s ease; }
-        .btn-read-more:hover { color: var(--primary-color); }
-        .btn-read-more:hover svg { transform: translateX(5px); }
+        .service-info { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background-color: #ffffff; }
+        .service-info-inner { padding: 15px 10px; border-left: 3px solid var(--primary-color); margin-top: 10px; margin-bottom: 10px; }
+        .service-info-inner p { font-size: 0.85rem; color: var(--grey-text); margin-bottom: 5px; }
+        .service-price { font-weight: bold; color: var(--text-dark); display: block; margin-bottom: 10px; }
 
-        /* PAGINATION */
-        .pagination { display: flex; gap: 10px; margin-top: 20px; }
-        .page-num {
-            display: flex; align-items: center; justify-content: center; width: 45px; height: 45px;
-            border: 1px solid var(--border-color); color: var(--text-dark); font-weight: 600; transition: all 0.3s;
-        }
-        .page-num.active, .page-num:hover {
-            background-color: var(--primary-color); border-color: var(--primary-color);
-        }
+        /* CONTACT BOX */
+        .contact-box { background-color: var(--bg-dark); color: var(--text-light); padding: 40px 30px; }
+        .contact-box h3 { color: var(--text-light); border-bottom-color: rgba(255,255,255,0.1); }
+        .contact-box p { color: #aaaaaa; font-size: 0.9rem; margin-bottom: 15px; }
+        .contact-box .btn-primary { width: 100%; margin-top: 20px; text-align: center; justify-content: center;}
 
-        /* SIDEBAR (RIGHT) */
-        .sidebar-widget {
-            background-color: var(--bg-light); border: 1px solid var(--border-color);
-            padding: 40px 30px; margin-bottom: 40px;
-        }
-        .sidebar-widget h3 {
-            font-size: 1.2rem; margin-bottom: 25px; padding-bottom: 15px;
-            border-bottom: 2px solid var(--border-color); position: relative;
-        }
-        .sidebar-widget h3::after {
-            content: ''; position: absolute; bottom: -2px; left: 0; width: 40px; height: 2px; background-color: var(--primary-color);
-        }
-
-        /* Search Widget */
-        .search-form { display: flex; }
-        .search-input {
-            width: 100%; padding: 15px; border: 1px solid var(--border-color);
-            background-color: var(--text-light); outline: none; font-family: inherit;
-        }
-        .search-btn {
-            background-color: var(--primary-color); color: var(--text-dark); border: none;
-            padding: 0 20px; cursor: pointer; transition: background 0.3s;
-        }
-        .search-btn:hover { background-color: #e6b800; }
-
-        /* Categories Widget */
-        .category-list { list-style: none; }
-        .category-list li { margin-bottom: 12px; }
-        .category-list a {
-            display: flex; justify-content: space-between; color: var(--grey-text);
-            padding-bottom: 12px; border-bottom: 1px solid var(--border-color); font-size: 0.95rem;
-        }
-        .category-list li:last-child a { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-        .category-list a:hover { color: var(--primary-color); }
-
-        /* Recent Posts Widget */
-        .recent-post-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: center; }
-        .recent-post-item:last-child { margin-bottom: 0; }
-        .recent-img { width: 80px; height: 80px; object-fit: cover; flex-shrink: 0; }
-        .recent-info h4 { font-size: 0.95rem; line-height: 1.4; margin-bottom: 5px; }
-        .recent-info h4 a:hover { color: var(--primary-color); }
-        .recent-date { font-size: 0.8rem; color: var(--primary-color); font-weight: 600; }
-
-        /* CTA SECTION */
-        .cta-section {
-            background-color: var(--bg-dark); color: var(--text-light); padding: 80px 0; text-align: center;
-            background-image: linear-gradient(rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0.9)), url('https://picsum.photos/id/1070/1920/800');
-            background-size: cover; background-attachment: fixed;
-        }
-        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; }
-        .cta-section p { font-size: 1.1rem; color: #aaaaaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn-primary {
-            background-color: var(--primary-color); color: var(--text-dark); border: none; display: inline-flex;
-            padding: 16px 35px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: background 0.3s;
-        }
+        /* BUTTONS */
+        .btn-primary { background-color: var(--primary-color); color: var(--text-dark); border: none; display: inline-flex; padding: 16px 32px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
         .btn-primary:hover { background-color: #e6b800; }
 
         /* FOOTER STYLES */
@@ -238,6 +168,7 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
+            .page-layout { grid-template-columns: 1fr; gap: 40px; }
                         .top-bar { display: none; }
             .mobile-menu-btn { display: block; }
             .main-nav { position: relative; padding: 15px 20px; }
@@ -251,9 +182,6 @@
             .hero-text h1 { font-size: 2.8rem; }
             .hero-image-wrapper { justify-content: center; }
             .hero-image-wrapper img { margin-top: 20px; max-width: 90%; }
-            .blog-grid { grid-template-columns: 1fr; }
-            .post-image { height: 250px; }
-            .post-content { padding: 25px; }
         }
     </style>
 </head>
@@ -293,10 +221,10 @@
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home +</a></li>
-                <li><a href="pages.html">Pages +</a></li>
+                <li><a href="#" style="color: var(--primary-color);">Pages +</a></li>
                 <li><a href="services.html">Services +</a></li>
                 <li><a href="portfolio.html">Portfolio +</a></li>
-                <li><a href="#" style="color: var(--primary-color);">Blog +</a></li>
+                <li><a href="blog.html">Blog +</a></li>
                 <li><a href="contact.html">Contacts</a></li>
             </ul>
             <div class="search-icon">
@@ -310,169 +238,123 @@
         <div class="banner-content container">
             
             <div class="hero-text">
-                <h1>News & Articles</h1>
-                <p>Stay updated with the latest construction trends, architectural designs, and industry news.</p>
+                <h1>Blog Insight</h1>
+                <p>Read the latest insights and industry news from Actura construction experts.</p>
                 <div class="breadcrumbs">
-                    <a href="index.html">Home</a> &nbsp; / &nbsp; <span style="color: white;">Our Blog</span>
+                    <a href="index.html">Home</a> &nbsp; / &nbsp; <span style="color: white;">Blog Post</span>
                 </div>
             </div>
-
-            <div class="hero-image-wrapper">
-                <img src="https://picsum.photos/id/1073/800/500" alt="Construction Blog Hero">
-            </div>
-
-        </div>
-    </section>
-
-    <section class="blog-section">
-        <div class="container blog-grid">
             
-            <main class="blog-feed">
-                
-                <article class="post-card">
-                    <a href="blog-sustainable-materials.html" class="post-image-link">
-                        <img src="https://picsum.photos/id/175/1200/800" alt="Construction Site" class="post-image">
-                        <div class="date-badge">
-                            <span>14</span>
-                            <small>Oct</small>
+            <div class="hero-image-wrapper">
+                <img src="https://picsum.photos/id/175/800/500" alt="Construction Hero Image">
+            </div>
+
+        </div>
+    </section>
+
+    <main class="container page-layout">
+        
+        <article class="main-content">
+            <div class="quote-line"></div>
+            <h2>Maximizing Space in Small Urban Lots</h2>
+            <p>Our company provides a full range of services for the construction of private houses and cottages since 1995. We successfully cope with tasks of varying complexity, provide long-term guarantees and regularly master new technologies.</p>
+            
+            <img src="https://picsum.photos/id/1040/800/400" alt="Completed Modern Private House" class="content-image">
+            
+            <p>Our portfolio includes dozens of successfully completed projects of houses of different storeys, with high-quality finishes and good repairs. Building houses is our vocation!</p>
+            
+            <img src="https://picsum.photos/id/192/800/400" alt="Architectural Planning" class="content-image">
+            
+            <ul class="feature-list">
+                <li>
+                    <svg class="list-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    100% Quality Guarantee on all materials
+                </li>
+                <li>
+                    <svg class="list-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Strict adherence to project deadlines
+                </li>
+                <li>
+                    <svg class="list-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Transparent pricing and no hidden fees
+                </li>
+            </ul>
+
+            <p>We approach each project with a commitment to excellence, ensuring that the structural integrity and aesthetic appeal meet the highest industry standards. Whether it's a cosmetic repair or a full-scale build, we treat your home as if it were our own.</p>
+        </article>
+
+        <aside class="sidebar">
+            
+            <div class="sidebar-widget">
+                <h3>Our Services</h3>
+                <ul class="service-links">
+                    <li>
+                        <button class="accordion-btn">Cosmetic repairs <span>+</span></button>
+                        <div class="service-info">
+                            <div class="service-info-inner">
+                                <span class="service-price">From $150 / m²</span>
+                                <p>Complete surface renewals, painting, and interior updates to refresh your living space.</p>
+                                <a href="#" style="color: var(--primary-color); font-size: 0.85rem; font-weight: bold;">Order Now ⟶</a>
+                            </div>
                         </div>
-                    </a>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Admin</span>
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Industry News</span>
+                    </li>
+                    <li>
+                        <button class="accordion-btn">Major repairs <span>+</span></button>
+                        <div class="service-info">
+                            <div class="service-info-inner">
+                                <span class="service-price">From $270 / m²</span>
+                                <p>Structural modifications, plumbing, and electrical overhauls for older properties.</p>
+                                <a href="#" style="color: var(--primary-color); font-size: 0.85rem; font-weight: bold;">Order Now ⟶</a>
+                            </div>
                         </div>
-                        <h2 class="post-title"><a href="blog-sustainable-materials.html">The Future of Sustainable Building Materials in 2024</a></h2>
-                        <p class="post-excerpt">As environmental concerns grow, the construction industry is rapidly shifting towards sustainable practices. Discover the top eco-friendly materials that are revolutionizing modern home building...</p>
-                        <a href="blog-sustainable-materials.html" class="btn-read-more">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <a href="blog-architectural-style.html" class="post-image-link">
-                        <img src="https://picsum.photos/id/192/1200/800" alt="Architectural Blueprint" class="post-image">
-                        <div class="date-badge">
-                            <span>08</span>
-                            <small>Oct</small>
+                    </li>
+                    <li>
+                        <button class="accordion-btn">House construction <span>+</span></button>
+                        <div class="service-info">
+                            <div class="service-info-inner">
+                                <span class="service-price">From $540 / m²</span>
+                                <p>Full lifecycle building from foundation to final commissioning.</p>
+                                <a href="#" style="color: var(--primary-color); font-size: 0.85rem; font-weight: bold;">Order Now ⟶</a>
+                            </div>
                         </div>
-                    </a>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> John Doe</span>
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Architecture</span>
-                        </div>
-                        <h2 class="post-title"><a href="blog-architectural-style.html">How to Choose the Right Architectural Style for Your Home</a></h2>
-                        <p class="post-excerpt">Choosing a style for your new home is one of the most exciting but daunting tasks. From modern minimalist to classic log houses, we break down what you need to consider before drawing the blueprints...</p>
-                        <a href="blog-architectural-style.html" class="btn-read-more">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                    </div>
-                </article>
+                    </li>
+                </ul>
+            </div>
 
-                <article class="post-card">
-                    <a href="blog-home-repair.html" class="post-image-link">
-                        <img src="https://picsum.photos/id/122/1200/800" alt="Interior Construction" class="post-image">
-                        <div class="date-badge">
-                            <span>28</span>
-                            <small>Sep</small>
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Admin</span>
-                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Renovations</span>
-                        </div>
-                        <h2 class="post-title"><a href="blog-home-repair.html">5 Signs It's Time for a Major Home Repair</a></h2>
-                        <p class="post-excerpt">Don't wait until a small issue becomes a structural nightmare. Here are the top five warning signs that indicate your property requires immediate professional intervention and major repairs...</p>
-                        <a href="blog-home-repair.html" class="btn-read-more">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                    </div>
-                </article>
+            <div class="sidebar-widget contact-box">
+                <h3>Need a consultation?</h3>
+                <p>Call us today to speak with one of our lead architects about your upcoming project.</p>
+                <p class="flex-center" style="color: white; font-size: 1.1rem; font-weight: bold; margin-top: 15px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    +1 234 567 89
+                </p>
+                <button class="btn-primary flex-center" onclick="window.location.href='contact.html'">Contact Us &nbsp; 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </button>
+            </div>
 
-                <div class="pagination">
-                    <a href="#" class="page-num active">1</a>
-                    <a href="#" class="page-num">2</a>
-                    <a href="#" class="page-num">3</a>
-                    <a href="#" class="page-num"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
-                </div>
+        </aside>
 
-            </main>
+    </main>
 
-            <aside class="blog-sidebar">
-                
-                <div class="sidebar-widget">
-                    <h3>Search</h3>
-                    <form class="search-form">
-                        <input type="text" class="search-input" placeholder="Search keywords...">
-                        <button type="submit" class="search-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        </button>
-                    </form>
-                </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordions = document.querySelectorAll(".accordion-btn");
 
-                <div class="sidebar-widget">
-                    <h3>Categories</h3>
-                    <ul class="category-list">
-                        <li><a href="#">Architecture <span>(12)</span></a></li>
-                        <li><a href="#">Construction Process <span>(08)</span></a></li>
-                        <li><a href="#">Industry News <span>(15)</span></a></li>
-                        <li><a href="#">Interior Design <span>(05)</span></a></li>
-                        <li><a href="#">Renovations & Repairs <span>(09)</span></a></li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-widget">
-                    <h3>Recent Posts</h3>
+            accordions.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    const panel = this.nextElementSibling;
                     
-                    <div class="recent-post-item">
-                        <img src="https://picsum.photos/id/175/150/150" alt="Recent" class="recent-img">
-                        <div class="recent-info">
-                            <h4><a href="blog-sustainable-materials.html">The Future of Sustainable Building Materials in 2024</a></h4>
-                            <span class="recent-date">Oct 14, 2024</span>
-                        </div>
-                    </div>
-
-                    <div class="recent-post-item">
-                        <img src="https://picsum.photos/id/192/150/150" alt="Recent" class="recent-img">
-                        <div class="recent-info">
-                            <h4><a href="blog-smart-home.html">Smart Home Integrations in New Builds</a></h4>
-                            <span class="recent-date">Oct 02, 2024</span>
-                        </div>
-                    </div>
-
-                    <div class="recent-post-item">
-                        <img src="https://picsum.photos/id/122/150/150" alt="Recent" class="recent-img">
-                        <div class="recent-info">
-                            <h4><a href="blog-maximizing-space.html">Maximizing Space in Small Urban Lots</a></h4>
-                            <span class="recent-date">Sep 20, 2024</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="sidebar-widget">
-                    <h3>Popular Tags</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <a href="#" style="padding: 5px 12px; background: #eee; font-size: 0.85rem; color: #666;">Building</a>
-                        <a href="#" style="padding: 5px 12px; background: #eee; font-size: 0.85rem; color: #666;">Design</a>
-                        <a href="#" style="padding: 5px 12px; background: #eee; font-size: 0.85rem; color: #666;">Concrete</a>
-                        <a href="#" style="padding: 5px 12px; background: #eee; font-size: 0.85rem; color: #666;">Planning</a>
-                        <a href="#" style="padding: 5px 12px; background: #eee; font-size: 0.85rem; color: #666;">Remodel</a>
-                    </div>
-                </div>
-
-            </aside>
-
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to start your project?</h2>
-            <p>We provide a free on-site consultation and a detailed estimate within 48 hours. Let's build your dream home together.</p>
-            <button class="btn-primary flex-center" onclick="window.location.href='contact.html'">Get a Free Quote &nbsp; 
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-        </div>
-    </section>
-
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">

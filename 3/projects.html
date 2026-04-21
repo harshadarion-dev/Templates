@@ -329,16 +329,44 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-        .mobile-toggle svg { width: 24px; height: 24px; stroke: var(--black); }
+
+        .mobile-toggle svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--black);
+        }
 
 
-                @media (max-width: 600px) {
-            header { flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
-            .mobile-toggle { display: block; }
-            nav { display: none; width: 100%; margin-top: 1rem; }
-            nav.nav-open { display: block; }
-            nav ul { flex-direction: column; align-items: center; gap: 1rem; }
-            header .btn { display: none; }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            nav.nav-open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            header .btn {
+                display: none;
+            }
 
 
             .projects-grid {
@@ -359,19 +387,176 @@
                 text-align: center;
             }
         }
-    </style>
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+        .whatsapp-float svg {
+            fill: currentColor;
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.6rem;
+            }
+            .whatsapp-float span {
+                display: none;
+            }
+        }
+
+
+        /* Card Carousel Styles */
+        .project-card .img-wrapper {
+            position: relative;
+            display: flex;
+        }
+
+        .card-carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s ease;
+        }
+
+        .card-carousel-track img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .card-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        .project-card .img-wrapper:hover .card-carousel-btn {
+            opacity: 1;
+        }
+
+        .card-carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .card-carousel-btn.prev {
+            left: 0.5rem;
+        }
+
+        .card-carousel-btn.next {
+            right: 0.5rem;
+        }
+
+        .card-carousel-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+    
+        /* Lightbox Styles */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .lightbox-modal.show .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2010;
+        }
+        .card-carousel-track img {
+            cursor: pointer;
+        }
+
+</style>
 </head>
 
 <body>
 
     <header>
         <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Real Estate
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Darion Homes
         </a>
-        
+
         <button class="mobile-toggle" aria-label="Toggle Menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
         <nav>
             <ul>
@@ -393,20 +578,37 @@
         </section>
 
         <div class="project-filters">
-            <button class="filter-btn active">All Projects</button>
-            <button class="filter-btn">Modern Block</button>
-            <button class="filter-btn">Family Homes</button>
-            <button class="filter-btn">Energy Efficient</button>
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="modern-block">Modern Block</button>
+            <button class="filter-btn" data-filter="family-homes">Family Homes</button>
+            <button class="filter-btn" data-filter="energy-efficient">Energy Efficient</button>
         </div>
 
         <section class="projects-grid">
 
-            <article class="project-card">
+            <article class="project-card" data-category="modern-block">
                 <a href="project-kaliningrad.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Completed</span>
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
-                            alt="Modern block house">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+                                alt="Modern block house" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>The Kaliningrad Block</h4>
                 </a>
@@ -438,12 +640,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="family-homes">
                 <a href="project-petersburg.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Completed</span>
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-                            alt="Comfortable family home">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Comfortable family home" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>Petersburg Haven</h4>
                 </a>
@@ -475,12 +694,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="energy-efficient">
                 <a href="project-orenburg.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Under Construction</span>
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80"
-                            alt="Energy-efficient house">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80"
+                                alt="Energy-efficient house" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>Eco-Villa Orenburg</h4>
                 </a>
@@ -512,12 +748,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="modern-block">
                 <a href="project-kazan.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Completed</span>
-                        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=600&q=80"
-                            alt="Minimalist wooden house">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=600&q=80"
+                                alt="Minimalist wooden house" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>Nordic Minimalist Retreat</h4>
                 </a>
@@ -549,12 +802,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="family-homes">
                 <a href="project-moscow.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Completed</span>
-                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=600&q=80"
-                            alt="Luxury concrete estate">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=600&q=80"
+                                alt="Luxury concrete estate" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>The Concrete Manor</h4>
                 </a>
@@ -586,12 +856,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="energy-efficient">
                 <a href="project-sochi.html">
                     <div class="img-wrapper">
                         <span class="status-badge">Concept Phase</span>
-                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80"
-                            alt="Modern A-frame style home">
+                        <div class="card-carousel-track"><img
+                                src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80"
+                                alt="Modern A-frame style home" /><img
+                                src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80"
+                                alt="Interior view" loading="lazy" /><img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                                alt="Outdoor view" loading="lazy" /></div>
+
+                        <button class="card-carousel-btn prev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <button class="card-carousel-btn next" aria-label="Next image">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+
                     </div>
                     <h4>Alpine A-Frame Concept</h4>
                 </a>
@@ -630,9 +917,13 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Real Estate
-        </a>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Darion Homes
+                </a>
                 <p>We build warm, reliable, and affordable concrete homes for your family's comfortable life. Quality
                     guaranteed from foundation to roof.</p>
             </div>
@@ -703,8 +994,104 @@
                     nav.classList.toggle('nav-open');
                 });
             }
+
+            // Filtering Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Card Carousel Logic
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const track = card.querySelector('.card-carousel-track');
+                const prevBtn = card.querySelector('.card-carousel-btn.prev');
+                const nextBtn = card.querySelector('.card-carousel-btn.next');
+
+                if (track && prevBtn && nextBtn) {
+                    const images = track.querySelectorAll('img');
+                    let currentIndex = 0;
+
+                    const handleArrowClick = (e, direction) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        if (direction === 'prev') {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                        } else {
+                            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                        }
+                        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    };
+
+                    prevBtn.addEventListener('click', (e) => handleArrowClick(e, 'prev'));
+                    nextBtn.addEventListener('click', (e) => handleArrowClick(e, 'next'));
+                }
+            });
+
+            // Lightbox logic
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            if (lightbox) {
+                const closeBtn = document.querySelector('.lightbox-close');
+                
+                document.querySelectorAll('.card-carousel-track img').forEach(img => {
+                    img.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        lightboxImg.src = img.src;
+                        lightbox.classList.add('show');
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+                
+                const closeLightbox = () => {
+                    lightbox.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                };
+                
+                closeBtn.addEventListener('click', closeLightbox);
+                lightbox.addEventListener('click', (e) => {
+                    if(e.target === lightbox) closeLightbox();
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if(e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+                });
+            }
         });
     </script>
+
+    <a href="https://wa.me/7702856454" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        <span>Get a Quote</span>
+    </a>
+
+
+    <!-- Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+
 </body>
 
 </html>
