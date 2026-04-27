@@ -66,6 +66,7 @@
             padding: 25px 0; transition: var(--transition-smooth); background: transparent;
         }
 
+        header.scrolled nav { color: var(--text-primary); }
         header.scrolled {
             background: rgba(247, 243, 232, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
             padding: 15px 0; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -74,7 +75,7 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;
-        }
+         color: #FFFFFF; }
 
         nav a:hover { color: var(--accent-green); }
 
@@ -154,10 +155,7 @@
         .team-card h4 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 5px; }
         .team-card p { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
 
-        /* --- Footer --- */
-        footer {
-            text-align: center; padding: 30px 0; font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border-color);
-        }
+        
 
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -171,6 +169,97 @@
             .team-grid { grid-template-columns: 1fr; }
             .story-images { grid-template-columns: 1fr; }
         }
+    
+        /* --- Robust Footer --- */
+        .main-footer {
+            background-color: #1C1A18;
+            color: #FFFFFF;
+            padding: 80px 0 30px;
+            margin-top: 80px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #FFFFFF !important;
+            text-transform: uppercase;
+        }
+        .footer-desc {
+            color: #A09E9C;
+            font-size: 0.95rem;
+            max-width: 350px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        .social-links a {
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid transparent;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+        .footer-col h4 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 15px;
+            color: #A09E9C;
+            font-size: 0.95rem;
+        }
+        .footer-col ul li a {
+            color: #A09E9C;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-col ul li a:hover {
+            color: #FFFFFF;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #A09E9C;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -178,7 +267,7 @@
     <header id="main-header">
         <div class="container">
             <nav aria-label="Main Navigation">
-                <a href="projects.html">Properties</a>
+                <a href="properties.html">Properties</a>
                 <a href="index.html" class="logo" aria-label="Archetype Home">ARCHETYPE</a>
                 <a href="about.html" style="color: var(--accent-green);">About Us</a>
             </nav>
@@ -238,12 +327,43 @@
         </div>
     </main>
 
-    <footer>
+    
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2026 Archetype. All rights reserved.</p>
-            <p>Sculpting Light, Defining Space. | Guntur, AP</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">ARCHETYPE</div>
+                    <p class="footer-desc">Sculpting light and defining space through visionary architecture and sustainable design.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Guntur, Andhra Pradesh</li>
+                        <li><a href="mailto:contact@archetype.com">contact@archetype.com</a></li>
+                        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Archetype. All rights reserved.</p>
+                <p>Sculpting Light, Defining Space.</p>
+            </div>
         </div>
     </footer>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
