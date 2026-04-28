@@ -16,251 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        /* Shared CSS Variables */
-        :root {
-            --bg-color: #f7f3e8; 
-            --surface-color: #FFFFFF;
-            --text-primary: #1C1A18; 
-            --text-secondary: #5A5856; 
-            --accent-green: #6d7b5b; 
-            --accent-green-hover: #5a664c;
-            --border-color: #D5D1C8;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
-            --container-width: 1280px;
-            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        /* Global Reset */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            line-height: 1.6;
-        }
-
-        a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
-        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
-
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        /* --- Navigation --- */
-        header {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            padding: 25px 0; transition: var(--transition-smooth); background: transparent;
-        }
-
-        header.scrolled nav { color: var(--text-primary); }
-        header.scrolled {
-            background: rgba(247, 243, 232, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-            padding: 15px 0; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;
-         color: #FFFFFF; }
-
-        nav a:hover { color: var(--accent-green); }
-
-        .logo {
-            font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600;
-            letter-spacing: 0.02em; text-transform: none;
-        }
-
-        /* --- Page Hero (Specific to About Page) --- */
-        .page-hero {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 100px;
-        }
-
-        .page-hero img {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-        }
-
-        .page-hero-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(28, 26, 24, 0.5); color: white;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 5%;
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 400; margin-bottom: 15px;
-        }
-
-        .page-hero p {
-            font-size: 1.1rem; max-width: 600px; opacity: 0.9;
-        }
-
-        /* --- Typography & Elements --- */
-        .section-title {
-            font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; margin-bottom: 40px;
-        }
-
-        .btn {
-            display: inline-block; background-color: var(--accent-green); color: white; border: none;
-            padding: 16px 32px; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500;
-            text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-smooth);
-        }
-
-        .btn:hover { background-color: var(--accent-green-hover); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-
-        /* --- Story / Philosophy Layout --- */
-        .story-section {
-            display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: flex-start; margin-bottom: 140px;
-        }
-
-        .story-content h2 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 30px; }
-        .story-content p { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 25px; }
-
-        .story-images {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-        }
-        .story-images img { width: 100%; height: 450px; object-fit: cover; }
-        .story-images img:nth-child(2) { margin-top: 60px; }
-
-        /* --- Team Grid --- */
-        .team-section { margin-bottom: 140px; }
-        .team-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
-        }
-
-        .team-card img {
-            width: 100%; height: 450px; filter: grayscale(100%); transition: filter 0.5s ease; margin-bottom: 20px;
-        }
-        .team-card:hover img { filter: grayscale(0%); }
-        .team-card h4 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 5px; }
-        .team-card p { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
-
-        
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .story-section { grid-template-columns: 1fr; gap: 50px; }
-            .story-images img:nth-child(2) { margin-top: 0; }
-            .team-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            header nav { font-size: 0.75rem; gap: 10px; }
-            .logo { font-size: 1.5rem; }
-            .team-grid { grid-template-columns: 1fr; }
-            .story-images { grid-template-columns: 1fr; }
-        }
-    
-        /* --- Robust Footer --- */
-        .main-footer {
-            background-color: #1C1A18;
-            color: #FFFFFF;
-            padding: 80px 0 30px;
-            margin-top: 80px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-        .footer-logo {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: #FFFFFF !important;
-            text-transform: uppercase;
-        }
-        .footer-desc {
-            color: #A09E9C;
-            font-size: 0.95rem;
-            max-width: 350px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-        .social-links a {
-            color: #FFFFFF;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 1px solid transparent;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: var(--accent-green);
-            border-color: var(--accent-green);
-        }
-        .footer-col h4 {
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            font-weight: 400;
-            color: #FFFFFF;
-        }
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .footer-col ul li {
-            margin-bottom: 15px;
-            color: #A09E9C;
-            font-size: 0.95rem;
-        }
-        .footer-col ul li a {
-            color: #A09E9C;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-col ul li a:hover {
-            color: #FFFFFF;
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #A09E9C;
-            font-size: 0.85rem;
-        }
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-        }
-
-    </style>
 </head>
 <body>
 
@@ -365,19 +120,50 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.getElementById('main-header');
-            
-            // Sticky Header Glassmorphism Effect on scroll
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918000081915" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.76.46 3.42 1.25 4.89L2 22l5.34-1.16c1.43.74 3.02 1.16 4.66 1.16 5.51 0 10-4.48 10-10S17.51 2 11.99 2zm0 18c-1.46 0-2.87-.37-4.13-1.04l-.3-.15-3.07.67.68-3-1.15-3.83A7.99 7.99 0 0 1 12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8zm3.92-5.46c-.22-.11-1.28-.63-1.48-.7-.2-.07-.35-.11-.5.11-.15.22-.57.7-.69.85-.13.14-.26.16-.48.05-.22-.11-.94-.35-1.78-1.11-.65-.59-1.09-1.32-1.22-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.25.33-.37.11-.13.15-.22.22-.37.07-.15.03-.28-.02-.39-.05-.11-.5-1.21-.69-1.66-.18-.44-.36-.38-.5-.39-.13-.01-.28-.01-.43-.01-.15 0-.4.06-.61.28-.22.22-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.09 3.61.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.45-.07 1.28-.52 1.48-1.02.18-.5.18-.93.13-1.02-.05-.09-.2-.14-.42-.25z"/>
+        </svg>
+    </a>
+    <style>
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+        background-color: #128C7E;
+        transform: scale(1.1);
+        color: #FFF;
+    }
+    @media screen and (max-width: 767px) {
+        .whatsapp-float {
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+        }
+        .whatsapp-float svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    </style>
+
 </body>
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Compatto</title>
+    <meta name="description"
+        content="Detailed furnishing services by Compatto. We provide end-to-end solutions for boutique hotels and luxury residences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .service-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .service-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-main);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .service-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .service-cta:hover {
+            color: var(--color-text-main);
+        }
+
+        .service-cta svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Compatto Home">
+                <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="currentColor" />
+                    <path d="M12 6c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" fill="#f9f7f4" />
+                </svg>
+                c&ast;mpatto
+            </a>
+
+            <div class="header-desktop-cta">
+                <a href="contact.html" class="btn btn-outline" id="desktop-contact-btn">Contact us</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="about.html">Who we are</a></li>
+                    <li><a href="challenges.html">The challenges</a></li>
+                    <li><a href="process.html">Our process</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="why-choose.html">Why choose us</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn" id="mobile-contact-btn">Contact us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="padding-top: var(--space-xl);">
+            <div class="container">
+                <div class="section-header">
+                    <h1 style="font-size: 2.5rem; margin-bottom: var(--space-sm);">Our <span
+                            style="color: var(--color-accent);">Services</span></h1>
+                    <p>Comprehensive luxury furnishing solutions tailored perfectly for your commercial and residential
+                        projects.</p>
+                </div>
+
+                <div style="margin-top: var(--space-lg);">
+
+                    <div class="service-card">
+                        <h2>Bespoke Furniture Sourcing</h2>
+                        <p>Leveraging our network of over 150+ international suppliers, we find exact matches for your
+                            architectural vision. Whether it's Italian leather sofas or Scandinavian dining sets, we
+                            handle procurement, negotiation, and quality control.</p>
+                        <a href="contact.html?service=sourcing" class="service-cta">
+                            Discuss Sourcing Options
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <h2>Custom Fabrication</h2>
+                        <p>For spaces with irregular dimensions or highly specific aesthetic needs, we oversee the
+                            design and fabrication of custom-made pieces. We collaborate closely with master craftsmen
+                            to bring unique concepts to life.</p>
+                        <a href="contact.html?service=fabrication" class="service-cta">
+                            Request Custom Fabrication
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <h2>Logistics & White-Glove Installation</h2>
+                        <p>We completely remove the headache of shipping and handling. Our expert logistics team ensures
+                            safe transit, while our white-glove installers unwrap, assemble, and perfectly place every
+                            item in the property.</p>
+                        <a href="contact.html?service=logistics" class="service-cta">
+                            Contact Regarding Logistics
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <h2>End-to-End Project Management</h2>
+                        <p>From the initial mood boards to the final walkthrough, we offer dedicated project management.
+                            This service brings all moving parts together under one centralized team, guaranteeing
+                            delivery within budget and on schedule.</p>
+                        <a href="contact.html?service=management" class="service-cta">
+                            Hire Our Project Managers
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" style="margin-top: var(--space-xl);">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">c&ast;mpatto</div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="about.html">Who we are</a></li>
+                        <li><a href="challenges.html">The challenges</a></li>
+                        <li><a href="process.html">Our process</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-choose.html">Why choose us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Compatto. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919854332066" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.76.46 3.42 1.25 4.89L2 22l5.34-1.16c1.43.74 3.02 1.16 4.66 1.16 5.51 0 10-4.48 10-10S17.51 2 11.99 2zm0 18c-1.46 0-2.87-.37-4.13-1.04l-.3-.15-3.07.67.68-3-1.15-3.83A7.99 7.99 0 0 1 12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8zm3.92-5.46c-.22-.11-1.28-.63-1.48-.7-.2-.07-.35-.11-.5.11-.15.22-.57.7-.69.85-.13.14-.26.16-.48.05-.22-.11-.94-.35-1.78-1.11-.65-.59-1.09-1.32-1.22-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.25.33-.37.11-.13.15-.22.22-.37.07-.15.03-.28-.02-.39-.05-.11-.5-1.21-.69-1.66-.18-.44-.36-.38-.5-.39-.13-.01-.28-.01-.43-.01-.15 0-.4.06-.61.28-.22.22-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.09 3.61.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.45-.07 1.28-.52 1.48-1.02.18-.5.18-.93.13-1.02-.05-.09-.2-.14-.42-.25z"/>
+        </svg>
+    </a>
+    <style>
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+        background-color: #128C7E;
+        transform: scale(1.1);
+        color: #FFF;
+    }
+    @media screen and (max-width: 767px) {
+        .whatsapp-float {
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+        }
+        .whatsapp-float svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    </style>
+
+</body>
+
+</html>
