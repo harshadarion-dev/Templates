@@ -4,120 +4,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - LUPIXERY</title>
+    <title>Our Services - LUPIXERY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Services Page Specific Styles */
+        .page-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #242422;
+            /* Dark background for striking contrast */
+            color: #ffffff;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .page-hero p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Alternating Service Rows */
+        .service-row {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        /* Reverses the flex direction for every even row */
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: var(--section-bg, #fcfcfc);
+        }
+
+        .service-image-container {
+            flex: 1;
+            height: 100%;
+            min-height: 80vh;
+            overflow: hidden;
+        }
+
+        .service-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-text-container {
+            flex: 1;
+            padding: 80px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--gold-color, #c5a880);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-text-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-dark, #1a1a1a);
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .service-text-container p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .service-features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: #333;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li svg {
+            color: var(--gold-color, #c5a880);
+            margin-right: 15px;
+            min-width: 20px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background-color: #242422;
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            border-top: 4px solid var(--gold-color, #c5a880);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+
+            .service-row,
+            .service-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .service-image-container {
+                min-height: 50vh;
+                width: 100%;
+            }
+
+            .service-text-container {
+                padding: 60px 30px;
+                width: 100%;
+            }
+
+            .service-text-container h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="header">
         <div class="container header-container">
-            <div class="logo">LUPIXERY</div>
+            <div class="logo"><a href="index.html" style="color: #fff;">LUPIXERY</a></div>
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Plans</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Photos</a></li>
-                    <li><a href="#">Conts</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="about.html" style="color: #fff;">About</a></li>
+                    <li><a href="plans.html" style="color: #fff;">Plans</a></li>
+                    <li><a href="blog.html" style="color: #fff;">Blog</a></li>
+                    <li><a href="services.html" style="color: var(--gold-color, #c5a880);">Services</a></li>
+                    <li><a href="contact.html" style="color: #fff;">Contact</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
         </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="page-hero">
-        <div class="container text-center">
-            <h1 class="page-title">Our Services</h1>
-            <p>Premium architectural and interior mastery.</p>
-        </div>
-    </section>
-
-    <section class="content-section">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-box outline-box">
-                    <h3>Premium Designs</h3>
-                    <p>Exclusive spatial experiences tailored specifically to the highest standards.</p>
-                </div>
-                <div class="feature-box outline-box">
-                    <h3>Consultations</h3>
-                    <p>Detailed analysis of your project goals spanning feasibility across structure and form.</p>
-                </div>
-            </div>
+            <h1>Our Expertise</h1>
+            <p>Comprehensive design solutions crafted for the most discerning clients. From the initial blueprint to the
+                final bespoke fixture.</p>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-wave">
-            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="var(--section-bg)" fill-opacity="1"
-                    d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,240C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
+    <section class="service-row">
+        <div class="service-image-container">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+                alt="Modern Architecture Exterior">
         </div>
+        <div class="service-text-container">
+            <span class="service-number">01 / EXPERTISE</span>
+            <h2>Architecture</h2>
+            <p>Our architectural philosophy is rooted in the belief that a building should be a seamless extension of
+                its environment. We specialize in designing high-end residential estates and striking commercial volumes
+                that prioritize natural light, spatial flow, and enduring structural integrity.</p>
+            <p>We guide our clients through every phase of the architectural journey, ensuring that visionary aesthetics
+                are perfectly balanced with rigorous engineering and local building compliances.</p>
+
+            <ul class="service-features">
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Custom Residential Design</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Commercial & Corporate Buildings</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Sustainable & Biophilic Engineering</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Full Permitting & Documentation</li>
+            </ul>
+
+            <a href="contact.html" class="btn-gold"
+                style="display: inline-block; text-decoration: none; max-width: 250px; text-align: center;">Inquire
+                About Architecture</a>
+        </div>
+    </section>
+
+    <section class="service-row">
+        <div class="service-image-container">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
+                alt="Luxury Interior Design">
+        </div>
+        <div class="service-text-container">
+            <span class="service-number">02 / EXPERTISE</span>
+            <h2>Interior Design</h2>
+            <p>An exceptional building requires an equally profound interior. Our interior design studio focuses on
+                tactile luxury—layering bespoke joinery, rare stone, artisan plaster, and meticulously curated
+                furnishings to create sanctuaries of profound comfort.</p>
+            <p>We don't just decorate spaces; we sculpt them. By deeply integrating interior design with the
+                architectural shell, we ensure a cohesive narrative from the front door to the private quarters.</p>
+
+            <ul class="service-features">
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Spatial Planning & Reconfiguration</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Bespoke Millwork & Cabinetry</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Global Furniture & Art Sourcing</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Architectural Lighting Design</li>
+            </ul>
+
+            <a href="contact.html" class="btn-gold"
+                style="display: inline-block; text-decoration: none; max-width: 250px; text-align: center;">Consult Our
+                Designers</a>
+        </div>
+    </section>
+
+    <section class="service-row">
+        <div class="service-image-container">
+            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80"
+                alt="Master Planning and Urban Design">
+        </div>
+        <div class="service-text-container">
+            <span class="service-number">03 / EXPERTISE</span>
+            <h2>Master Planning</h2>
+            <p>For large-scale visions, we provide comprehensive master planning services that define the future of an
+                entire property or community. Whether developing a sprawling private estate, a luxury resort, or a
+                multi-use urban district, we lay the groundwork for long-term success.</p>
+            <p>We analyze topography, local ecosystems, and community dynamics to create strategic roadmaps that dictate
+                land use, infrastructure, landscaping, and phased development.</p>
+
+            <ul class="service-features">
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Large-Scale Estate Planning</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Landscape & Topography Analysis</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Zoning Strategy & Feasibility Studies</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Multi-Phase Development Roadmaps</li>
+            </ul>
+
+            <a href="contact.html" class="btn-gold"
+                style="display: inline-block; text-decoration: none; max-width: 250px; text-align: center;">Discuss Your
+                Masterplan</a>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px;">Ready to begin
+                your project?</h2>
+            <p
+                style="font-family: 'Inter', sans-serif; font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 40px;">
+                Contact our principal architects today to schedule a private consultation and discuss your vision.</p>
+            <a href="contact.html" class="btn-gold"
+                style="display: inline-block; padding: 18px 40px; font-size: 1.1rem; text-decoration: none;">Contact
+                LUPIXERY</a>
+        </div>
+    </section>
+
+    <footer class="footer" style="margin-top: 0;">
         <div class="footer-content light-bg">
             <div class="container footer-grid">
                 <div class="footer-logo">
-                    <h2>BESTLOND</h2>
-                    <p class="footer-address">Inansntauaa ISOSOIX<br>10 Cow serbese 3t1S0M</p>
+                    <h2>LUPIXERY</h2>
+                    <p class="footer-address">1245 Avenue of the Americas<br>New York, NY 10020</p>
+                    <p class="footer-disclaimer">Copyright 2026. All rights reserved.</p>
+                </div>
+                <div class="footer-col" style="grid-column: span 1;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Master Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="grid-column: span 1;">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="grid-column: span 1;">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="accessability.html">Accessibility</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer><script src="js/main.js"></script>
+    </footer>
 
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919977245718" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" stroke="none">
-            <path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.76.46 3.42 1.25 4.89L2 22l5.34-1.16c1.43.74 3.02 1.16 4.66 1.16 5.51 0 10-4.48 10-10S17.51 2 11.99 2zm0 18c-1.46 0-2.87-.37-4.13-1.04l-.3-.15-3.07.67.68-3-1.15-3.83A7.99 7.99 0 0 1 12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8zm3.92-5.46c-.22-.11-1.28-.63-1.48-.7-.2-.07-.35-.11-.5.11-.15.22-.57.7-.69.85-.13.14-.26.16-.48.05-.22-.11-.94-.35-1.78-1.11-.65-.59-1.09-1.32-1.22-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.25.33-.37.11-.13.15-.22.22-.37.07-.15.03-.28-.02-.39-.05-.11-.5-1.21-.69-1.66-.18-.44-.36-.38-.5-.39-.13-.01-.28-.01-.43-.01-.15 0-.4.06-.61.28-.22.22-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.09 3.61.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.45-.07 1.28-.52 1.48-1.02.18-.5.18-.93.13-1.02-.05-.09-.2-.14-.42-.25z"/>
+    <a href="https://wa.me/919999999999?text=Hello%20I’d%20like%20to%20discuss%20your%20services." target="_blank"
+        class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
         </svg>
     </a>
-    <style>
-    .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 40px;
-        right: 40px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    .whatsapp-float:hover {
-        background-color: #128C7E;
-        transform: scale(1.1);
-        color: #FFF;
-    }
-    @media screen and (max-width: 767px) {
-        .whatsapp-float {
-            width: 50px;
-            height: 50px;
-            bottom: 20px;
-            right: 20px;
-        }
-        .whatsapp-float svg {
-            width: 25px;
-            height: 25px;
-        }
-    }
-    </style>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>

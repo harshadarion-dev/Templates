@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Agents | Parabot Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Hero Section */
+        .agents-hero {
+            padding: 80px 5% 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .agents-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .agents-hero p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Lead Agent Spotlight (Asymmetric Grid) */
+        .spotlight-section {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        @media (min-width: 992px) {
+            .spotlight-section {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .spotlight-img {
+            flex: 1.2;
+            height: 600px;
+            position: relative;
+        }
+
+        .spotlight-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        .spotlight-img:hover img {
+            filter: grayscale(0%);
+        }
+
+        .spotlight-content {
+            flex: 1;
+        }
+
+        .spotlight-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .agent-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .spotlight-content p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Agents Grid */
+        .agents-grid-wrapper {
+            background-color: #f9f8f6;
+            padding: 100px 5%;
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .agents-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .agents-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Agent Card */
+        .agent-card {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .agent-card-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            margin-bottom: 24px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .agent-card:hover .agent-card-img {
+            filter: grayscale(0%);
+        }
+
+        .agent-card h3 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+
+        .agent-card .role {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .agent-card .specialty {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Agent WhatsApp Button */
+        .btn-agent-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: transparent;
+            border: 1px solid #E0E0E0;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-agent-wa:hover {
+            background-color: #25D366;
+            border-color: #25D366;
+            color: #fff;
+        }
+
+        .wa-icon {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Parabot Estate</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="agents.html" style="font-weight: 500; border-bottom: 2px solid var(--accent);">Agents</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agents-hero">
+            <h1>The Faces of Excellence</h1>
+            <p>Our advisors are more than brokers; they are market specialists, lifestyle curators, and dedicated
+                partners in your real estate journey.</p>
+        </section>
+
+        <section class="spotlight-section">
+            <div class="spotlight-img">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                    alt="Michael Sterling">
+            </div>
+            <div class="spotlight-content">
+                <span class="agent-title">Founder & Principal Advisor</span>
+                <h2>Michael Sterling</h2>
+                <p>With two decades of experience and over $2.5 billion in residential sales, Michael has redefined the
+                    luxury landscape in Beverly Hills. His reputation for absolute discretion and innovative marketing
+                    strategies has made him the first choice for high-net-worth individuals globally.</p>
+                <p>Michael specializes in off-market trophy estates and architectural masterpieces that never reach the
+                    public eye.</p>
+                <a href="contact.html" class="btn-dark" target="_blank">Schedule Private Consultation</a>
+            </div>
+        </section>
+
+        <section class="agents-grid-wrapper">
+            <div class="agents-grid">
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="Elena Vance">
+                    <h3>Elena Vance</h3>
+                    <span class="role">Managing Partner</span>
+                    <p class="specialty">Expertise: Manhattan Penthouses & Tribeca Lofts</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="Julian Rhodes">
+                    <h3>Julian Rhodes</h3>
+                    <span class="role">Investment Director</span>
+                    <p class="specialty">Expertise: Commercial Portfolios & Miami Waterfront</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="Sofia Chen">
+                    <h3>Sofia Chen</h3>
+                    <span class="role">Global Relocation Lead</span>
+                    <p class="specialty">Expertise: International Estates & Concierge Services</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="Marcus Thorne">
+                    <h3>Marcus Thorne</h3>
+                    <span class="role">Senior Advisor</span>
+                    <p class="specialty">Expertise: Historic London Townhouses & Chelsea</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="Isabella Rivera">
+                    <h3>Isabella Rivera</h3>
+                    <span class="role">Luxury Specialist</span>
+                    <p class="specialty">Expertise: Coastal Retreats & Sustainable Builds</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+                        class="agent-card-img" alt="David Park">
+                    <h3>David Park</h3>
+                    <span class="role">Acquisitions Manager</span>
+                    <p class="specialty">Expertise: Tech-Integrated Homes & Smart Estates</p>
+                    <a href="contact.html" class="btn-agent-wa" target="_blank">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="global-footer-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

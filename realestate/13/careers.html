@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Parabot Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Hero Section */
+        .careers-hero {
+            padding: 80px 5% 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .careers-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .careers-hero p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Culture Section (Asymmetric Image Grid) */
+        .culture-section {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 5% 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        @media (min-width: 992px) {
+            .culture-section {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .culture-images {
+            flex: 1.2;
+            display: flex;
+            gap: 20px;
+        }
+
+        .culture-content {
+            flex: 1;
+        }
+
+        .culture-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .culture-content p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        /* Job Openings Board */
+        .job-board-bg {
+            background-color: #f9f8f6;
+            padding: 100px 5%;
+        }
+
+        .job-board-header {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 20px;
+        }
+
+        .job-board-header h2 {
+            font-size: 2rem;
+        }
+
+        .jobs-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .job-item {
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (min-width: 768px) {
+            .job-item {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .job-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .job-info h3 {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .job-meta {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-apply {
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 2px;
+        }
+
+        /* Talent CTA Section */
+        .talent-cta {
+            padding: 100px 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .talent-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .talent-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Parabot Estate</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="about.html">About</a>
+            <a href="careers.html" style="font-weight: 500; border-bottom: 2px solid var(--accent);">Careers</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="careers-hero">
+            <h1>Shape the Future of Estate</h1>
+            <p>We are looking for visionary thinkers, market disruptors, and creative storytellers to join our global
+                collective of real estate experts.</p>
+        </section>
+
+        <section class="culture-section">
+            <div class="culture-images">
+                <div class="img-col col-1">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                        alt="Modern Office Space">
+                </div>
+                <div class="img-col col-2 mt-shift">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+                        alt="Team Collaboration">
+                </div>
+            </div>
+            <div class="culture-content">
+                <h2>A Culture of Excellence</h2>
+                <p>At Parabot Estate, we believe that the environment you work in should be as inspiring as the homes we
+                    sell. We foster a culture of radical autonomy, where innovation is rewarded and the traditional
+                    hierarchies of real estate are dismantled.</p>
+                <p>Our team enjoys access to cutting-edge proprietary tech, a global network of high-net-worth contacts,
+                    and a creative studio dedicated to producing the world's most beautiful property marketing.</p>
+            </div>
+        </section>
+
+        <section class="job-board-bg">
+            <div class="job-board-header">
+                <h2>Open Roles</h2>
+                <p style="color: var(--text-secondary);">4 Positions Available</p>
+            </div>
+
+            <div class="jobs-list">
+                <a href="contact.html" class="job-item">
+                    <div class="job-info">
+                        <h3>Luxury Sales Advisor</h3>
+                        <div class="job-meta">
+                            <span>Beverly Hills, CA</span>
+                            <span>•</span>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <span class="btn-apply">Apply Now</span>
+                </a>
+
+                <a href="contact.html" class="job-item">
+                    <div class="job-info">
+                        <h3>Global Marketing Director</h3>
+                        <div class="job-meta">
+                            <span>New York / Remote</span>
+                            <span>•</span>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <span class="btn-apply">Apply Now</span>
+                </a>
+
+                <a href="contact.html" class="job-item">
+                    <div class="job-info">
+                        <h3>Relocation Coordinator</h3>
+                        <div class="job-meta">
+                            <span>Dubai, UAE</span>
+                            <span>•</span>
+                            <span>Contract</span>
+                        </div>
+                    </div>
+                    <span class="btn-apply">Apply Now</span>
+                </a>
+
+                <a href="contact.html" class="job-item">
+                    <div class="job-info">
+                        <h3>Real Estate Tech Product Manager</h3>
+                        <div class="job-meta">
+                            <span>London, UK</span>
+                            <span>•</span>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <span class="btn-apply">Apply Now</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="talent-cta">
+            <h2>Don't see the right fit?</h2>
+            <p>We are always interested in meeting exceptional talent. If you believe your skills can elevate our brand,
+                reach out to our recruitment team directly for a confidential conversation.</p>
+
+            <a href="contact.html" class="btn-dark" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        </section>
+    </main>
+
+    <div id="global-footer-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

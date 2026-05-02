@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SHTUKA.AA — Innovative interior design. Apartments, houses, offices and furniture turnkey.">
+  <title>SHTUKA.AA — Innovative Design for Your Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">SHTUKA.AA</a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="index.html#stages" class="nav__link">Stages</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="index.html#stages" class="mobile-menu__link">Stages</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80" alt="Modern dark interior">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Innovative Design</p>
+      <h1 class="hero__title">For Your Home</h1>
+      <p class="hero__text">Submit your inquiry now and get 15% discount on custom home design layout</p>
+      <div class="hero__buttons">
+        <a href="contact.html" class="btn btn--primary">Submit Inquiry</a>
+        <a href="services.html" class="btn btn--primary" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4);">Learn More</a>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__header reveal">
+        <span class="label">[ about ]</span>
+        <div class="about__accordions">
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false">
+              Founding History
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion__body">
+              <p class="accordion__text">The studio was founded in 2018 with a mission to create spaces that inspire and improve quality of life.</p>
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false">
+              Our Values
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion__body">
+              <p class="accordion__text">Honesty, attention to detail, and an individual approach to each project are the foundation of our philosophy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__title-row reveal">
+        <h2 class="section-title">We Work For<br>Your Comfort</h2>
+        <a href="services.html" class="btn btn--outline">Go to Services</a>
+      </div>
+
+      <div class="about__grid reveal">
+        <div class="about__image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Grey minimalist living room">
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature__icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <h4 class="feature__title">Work Nationwide</h4>
+              <p class="feature__text">We work remotely and on-site, visiting projects in any city.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="feature__title">Quality Focus</h4>
+              <p class="feature__text">Every project is executed with special attention to detail.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <h4 class="feature__title">Uniqueness is Key</h4>
+              <p class="feature__text">We don't copy, we create unique interiors with character.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 class="feature__title">Always Available</h4>
+              <p class="feature__text">Each stage is accompanied by a personal manager.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section class="stages" id="stages">
+    <div class="container">
+      <div class="stages__header reveal">
+        <h2 class="section-title stages__title">Our Work<br>Process with Clients</h2>
+        <span class="label" style="color:rgba(255,255,255,.6);">[ stages ]</span>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <span class="timeline__num">01 |</span>
+          <h4 class="timeline__heading">Initial Call & Introduction</h4>
+          <p class="timeline__text">We meet, understand your requirements and style, and fill out a brief.</p>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <span class="timeline__num">02 |</span>
+          <h4 class="timeline__heading">Contract Signing</h4>
+          <p class="timeline__text">Clear terms and a clear understanding of all stages.</p>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <span class="timeline__num">03 |</span>
+          <h4 class="timeline__heading">Project Start</h4>
+          <p class="timeline__text">We send layouts and floor plans, coordinate revisions.</p>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <span class="timeline__num">04 |</span>
+          <h4 class="timeline__heading">Project Midpoint</h4>
+          <p class="timeline__text">We provide visualizations and select materials.</p>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <span class="timeline__num">05 |</span>
+          <h4 class="timeline__heading">Project Completion</h4>
+          <p class="timeline__text">Design project ready for implementation. Site supervision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <span class="label reveal">[ services ]</span>
+      <div class="services__grid">
+        <a href="service-detail-apartment.html" class="service-card reveal">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Apartment design">
+          </div>
+          <div class="service-card__overlay"></div>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">Apartment<br>Design</h3>
+            <p class="service-card__text">Complete range of work from planning to implementation.</p>
+          </div>
+        </a>
+
+        <a href="service-detail-house.html" class="service-card reveal">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="House design">
+          </div>
+          <div class="service-card__overlay"></div>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">House<br>Design</h3>
+            <p class="service-card__text">Architectural solutions and interiors for country properties.</p>
+          </div>
+        </a>
+
+        <a href="service-detail-office.html" class="service-card reveal">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office design">
+          </div>
+          <div class="service-card__overlay"></div>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">Office<br>Design</h3>
+            <p class="service-card__text">Workspaces that increase team productivity.</p>
+          </div>
+        </a>
+
+        <a href="service-detail-furniture.html" class="service-card reveal">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&q=80" alt="Furniture design">
+          </div>
+          <div class="service-card__overlay"></div>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">Furniture<br>Design</h3>
+            <p class="service-card__text">Custom pieces tailored to your interior and dimensions.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">SHTUKA.AA</div>
+          <p class="footer__text">We create interiors you want to live in. Minimalism, functionality, and timeless aesthetics.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navigation</h4>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="services.html" class="footer__link">Services</a>
+          <a href="index.html#stages" class="footer__link">Stages</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Services</h4>
+          <a href="service-detail-apartment.html" class="footer__link">Apartment Design</a>
+          <a href="service-detail-house.html" class="footer__link">House Design</a>
+          <a href="service-detail-office.html" class="footer__link">Office Design</a>
+          <a href="service-detail-furniture.html" class="footer__link">Custom Furniture</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <a href="tel:+79199999999" class="footer__link">+7 (919) 999-99-99</a>
+          <a href="mailto:hello@shtuka.aa" class="footer__link">hello@shtuka.aa</a>
+          <a href="contact.html" class="footer__link">Moscow, Rublevskoe Sh.</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 SHTUKA.AA. All rights reserved.</span>
+        <span>Privacy Policy</span>
+      </div>
+    </div>
+  </footer><a href="https://wa.me/919999999999?text=Hello%20I%27d%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.585.722 5.004 1.977 7.073L2 30l7.127-1.977A13.936 13.936 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.2a11.26 11.26 0 01-5.76-1.578l-.413-.248-4.323 1.134 1.153-4.215-.269-.428A11.194 11.194 0 014.8 16C4.8 9.836 9.836 4.8 16 4.8S27.2 9.836 27.2 16 22.164 27.2 16 27.2zm6.168-8.424c-.336-.168-1.992-.984-2.304-1.096-.312-.112-.54-.168-.76.168-.216.336-.864 1.096-1.056 1.32-.192.224-.384.252-.72.084-.336-.168-1.416-.52-2.7-1.664-1-.896-1.672-2-1.872-2.336-.2-.336-.02-.516.148-.684.12-.12.336-.392.504-.592.168-.2.224-.336.336-.56.112-.224.056-.416-.028-.584-.084-.168-.76-1.832-1.04-2.512-.272-.656-.552-.568-.76-.576-.2-.008-.416-.012-.648-.012-.224 0-.584.084-.896.416-.312.336-1.184 1.152-1.184 2.808 0 1.656 1.208 3.264 1.376 3.488.168.224 2.376 3.632 5.76 5.088.808.344 1.44.552 1.928.712.808.256 1.544.22 2.12.136.648-.096 2-1.008 2.272-1.6.272-.592.272-1.104.2-1.208-.072-.104-.312-.168-.648-.336z"/></svg>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>

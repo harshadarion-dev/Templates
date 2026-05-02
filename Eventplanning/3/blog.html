@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — AUDREY Event Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AUDREY</a>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freebies.html">Freebies</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">The Journal</h1>
+            <div class="page-line"></div>
+            <p class="page-subtitle">Inspiration, tips, and behind-the-scenes stories from the world of luxury events.
+            </p>
+        </div>
+    </section>
+
+    <section class="blog-featured">
+        <div class="container">
+            <a href="blog-post.html?post=featured" class="featured-post">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=600&fit=crop"
+                        alt="How to Plan a Luxury Wedding in 6 Months">
+                </div>
+                <div class="featured-content">
+                    <span class="post-category">Wedding Planning</span>
+                    <h2>How to Plan a Luxury Wedding in 6 Months</h2>
+                    <p>A step-by-step guide to creating an unforgettable celebration without the usual 12-month
+                        timeline. From venue selection to vendor coordination, here's everything you need to know.</p>
+                    <div class="post-meta">
+                        <span class="post-date">April 15, 2026</span>
+                        <span class="post-read">8 min read</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="tips">Tips & Guides</button>
+                <button class="filter-btn" data-filter="inspiration">Inspiration</button>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card" data-category="wedding">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop"
+                            alt="Choosing the Perfect Wedding Venue">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Weddings</span>
+                        <h3><a href="blog-post.html?post=venue">Choosing the Perfect Wedding Venue: A Complete Guide</a>
+                        </h3>
+                        <p>The venue sets the tone for your entire celebration. Here's how to find the one that matches
+                            your vision, guest count, and budget.</p>
+                        <div class="post-meta">
+                            <span class="post-date">April 10, 2026</span>
+                            <span class="post-read">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="corporate">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+                            alt="Corporate Event Trends 2026">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Corporate</span>
+                        <h3><a href="blog-post.html?post=corporate-trends">Corporate Event Trends to Watch in 2026</a>
+                        </h3>
+                        <p>From immersive technology to sustainable practices, discover what's shaping the future of
+                            corporate gatherings and brand experiences.</p>
+                        <div class="post-meta">
+                            <span class="post-date">April 5, 2026</span>
+                            <span class="post-read">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="tips">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=400&fit=crop"
+                            alt="Event Budget Mistakes">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Tips & Guides</span>
+                        <h3><a href="blog-post.html?post=budget">5 Event Budget Mistakes Everyone Makes</a></h3>
+                        <p>Hidden costs, last-minute changes, and overlooked details can blow your budget. Learn the
+                            pitfalls and how to steer clear.</p>
+                        <div class="post-meta">
+                            <span class="post-date">March 28, 2026</span>
+                            <span class="post-read">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="inspiration">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&h=400&fit=crop"
+                            alt="Color Palettes for 2026">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Inspiration</span>
+                        <h3><a href="blog-post.html?post=colors">The Most Stunning Event Color Palettes for 2026</a>
+                        </h3>
+                        <p>From moody jewel tones to soft pastels, explore the color combinations that are defining
+                            luxury events this year.</p>
+                        <div class="post-meta">
+                            <span class="post-date">March 20, 2026</span>
+                            <span class="post-read">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="wedding">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=400&fit=crop"
+                            alt="Destination Wedding Planning">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Weddings</span>
+                        <h3><a href="blog-post.html?post=destination">Destination Wedding Planning: From Dream to
+                                Reality</a></h3>
+                        <p>Say "I do" somewhere unforgettable. Everything you need to know about planning a wedding
+                            abroad, from legalities to logistics.</p>
+                        <div class="post-meta">
+                            <span class="post-date">March 15, 2026</span>
+                            <span class="post-read">9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="corporate">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop"
+                            alt="Networking Event Success">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Corporate</span>
+                        <h3><a href="blog-post.html?post=networking">How to Host a Networking Event That People Actually
+                                Enjoy</a></h3>
+                        <p>Ditch the awkward name tags. Create networking experiences that foster genuine connections
+                            and leave lasting impressions.</p>
+                        <div class="post-meta">
+                            <span class="post-date">March 8, 2026</span>
+                            <span class="post-read">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="tips">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop"
+                            alt="Vendor Communication">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Tips & Guides</span>
+                        <h3><a href="blog-post.html?post=vendors">How to Communicate Effectively with Your Event
+                                Vendors</a></h3>
+                        <p>Clear communication is the secret to a flawless event. Master the art of briefing, feedback,
+                            and coordination with your vendor team.</p>
+                        <div class="post-meta">
+                            <span class="post-date">February 28, 2026</span>
+                            <span class="post-read">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="inspiration">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&h=400&fit=crop"
+                            alt="Table Setting Ideas">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Inspiration</span>
+                        <h3><a href="blog-post.html?post=tablescape">Tablescape Ideas That Will Wow Your Guests</a></h3>
+                        <p>Elevate your dining experience with these stunning table setting concepts, from minimalist
+                            elegance to maximalist drama.</p>
+                        <div class="post-meta">
+                            <span class="post-date">February 20, 2026</span>
+                            <span class="post-read">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="wedding">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop"
+                            alt="Intimate Wedding Ideas">
+                    </div>
+                    <div class="blog-content">
+                        <span class="post-category">Weddings</span>
+                        <h3><a href="blog-post.html?post=intimate">The Rise of Intimate Weddings: Small but
+                                Spectacular</a></h3>
+                        <p>Why more couples are choosing micro-weddings and how to make a small guest list feel
+                            incredibly special and luxurious.</p>
+                        <div class="post-meta">
+                            <span class="post-date">February 14, 2026</span>
+                            <span class="post-read">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-pagination">
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <span class="pagination-dots">...</span>
+                <a href="#" class="pagination-btn">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">AUDREY</a>
+                <p class="footer-tagline">Events planned to perfection.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freebies.html">Freebies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>hello@audreyevents.com</p>
+                <p>+91 99999 99999</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#" aria-label="Pinterest"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="8" x2="12" y2="21"></line>
+                            <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                            <circle cx="12" cy="8" r="5"></circle>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 AUDREY Events. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919999999999?text=Hello%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20event%20planning%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        (function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const filter = this.dataset.filter;
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    blogCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => { card.style.display = 'none'; }, 300);
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

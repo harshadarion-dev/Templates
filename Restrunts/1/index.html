@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Savore — A minimal, elegant fine dining restaurant experience. Taste the art of simplicity.">
+  <title>Savore — Fine Dining Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/svg/logo-icon.svg">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">Savore</a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="contact.html#reservation" class="btn btn-outline">Reserve</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html#reservation" class="btn btn-primary" style="margin-top: 20px;">Reserve a Table</a>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content animate-on-scroll">
+          <span class="hero-label">Est. 2019 — Fine Dining</span>
+          <h1 class="hero-title">Taste the Art of <em>Simplicity</em></h1>
+          <p class="hero-desc">
+            Experience culinary excellence where every dish tells a story. 
+            Our chefs craft unforgettable moments through seasonal ingredients 
+            and timeless techniques in an atmosphere of refined elegance.
+          </p>
+          <div class="hero-buttons">
+            <a href="contact.html#reservation" class="btn btn-primary">Reserve a Table</a>
+            <a href="about.html" class="btn btn-outline">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-image animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" 
+               alt="Elegant fine dining dish with artistic plating on white ceramic plate">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MENU HIGHLIGHTS
+       ============================================ -->
+  <section class="section menu-highlights" id="menu">
+    <div class="container">
+      <div class="menu-grid">
+        <div class="menu-intro animate-on-scroll">
+          <span class="section-label">Our Menu</span>
+          <h2 class="section-title">Menu Highlights</h2>
+          <p>
+            Each dish is a masterpiece, thoughtfully composed to highlight the 
+            natural beauty of seasonal ingredients. Our menu evolves with the 
+            harvest, ensuring every visit offers something new to discover.
+          </p>
+          <div class="deco-line"></div>
+          <a href="services.html" class="btn btn-outline">View Full Menu</a>
+        </div>
+
+        <div class="menu-cards">
+          <div class="menu-card animate-on-scroll">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" 
+                   alt="Grilled ribeye steak with herb butter and roasted vegetables">
+            </div>
+            <div class="menu-card-info">
+              <h4>Wagyu Ribeye</h4>
+              <p>A5 Wagyu, truffle jus, seasonal vegetables</p>
+              <div class="menu-card-price">$85</div>
+            </div>
+          </div>
+
+          <div class="menu-card animate-on-scroll">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80" 
+                   alt="Pan-seared scallops with cauliflower puree">
+            </div>
+            <div class="menu-card-info">
+              <h4>Scallops & Cauliflower</h4>
+              <p>Diver scallops, brown butter, capers</p>
+              <div class="menu-card-price">$42</div>
+            </div>
+          </div>
+
+          <div class="menu-card animate-on-scroll">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" 
+                   alt="Fresh handmade pasta with wild mushrooms">
+            </div>
+            <div class="menu-card-info">
+              <h4>Wild Mushroom Pasta</h4>
+              <p>Handmade pappardelle, porcini, parmesan</p>
+              <div class="menu-card-price">$38</div>
+            </div>
+          </div>
+
+          <div class="menu-card animate-on-scroll">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" 
+                   alt="Chocolate fondant dessert with gold leaf">
+            </div>
+            <div class="menu-card-info">
+              <h4>Dark Chocolate Fondant</h4>
+              <p>Valrhona 70%, salted caramel, gold leaf</p>
+              <div class="menu-card-price">$24</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT THE RESTAURANT
+       ============================================ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" 
+               alt="Elegant restaurant interior with warm ambient lighting">
+        </div>
+
+        <div class="about-content animate-on-scroll">
+          <span class="section-label">Our Story</span>
+          <h2>About the Restaurant</h2>
+          <p>
+            Nestled in the heart of the city, Savore was born from a simple belief: 
+            that exceptional food doesn't need to be complicated. Since 2019, we've 
+            been crafting experiences that honor the ingredient.
+          </p>
+          <p>
+            Our kitchen is a place of quiet precision, where classical techniques 
+            meet modern creativity. Every plate that leaves our pass is a reflection 
+            of our commitment to excellence.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Seasonal Ingredients</h4>
+                <p>Sourced from local farms and artisan producers</p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Timeless Techniques</h4>
+                <p>Classical methods refined over decades</p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Made with Passion</h4>
+                <p>Every dish crafted with care and attention</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-outline" style="margin-top: 30px;">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CHEF STORY
+       ============================================ -->
+  <section class="section chef-section">
+    <div class="container">
+      <div class="chef-grid">
+        <div class="chef-content animate-on-scroll">
+          <span class="section-label">Chef's Story</span>
+          <h2>Meet Our Chef</h2>
+          <p class="chef-quote">
+            "Cooking is not just about feeding people. It's about creating memories, 
+            evoking emotions, and sharing a piece of your soul through every plate."
+          </p>
+          <p>
+            Chef Marcus Vance brings over 20 years of culinary expertise to Savore. 
+            Trained in the kitchens of Paris and Tokyo, his approach blends European 
+            precision with Japanese minimalism.
+          </p>
+          <div style="margin-top: 30px;">
+            <div class="chef-name">Marcus Vance</div>
+            <div class="chef-role">Executive Chef & Founder</div>
+          </div>
+          <a href="about.html" class="btn btn-outline" style="margin-top: 24px;">Full Story</a>
+        </div>
+
+        <div class="chef-image animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80" 
+               alt="Chef Marcus Vance in professional kitchen">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES / SPECIALTIES
+       ============================================ -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our Specialties</h2>
+        <p class="section-desc">
+          From intimate dinners to grand celebrations, we offer a range of 
+          culinary experiences tailored to your desires.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3>Fine Dining</h3>
+          <p>An intimate tasting menu experience with wine pairings, designed for the discerning palate.</p>
+          <a href="services.html" class="service-link">
+            Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <h3>Private Events</h3>
+          <p>Exclusive dining spaces for celebrations, corporate gatherings, and special occasions.</p>
+          <a href="services.html" class="service-link">
+            Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <h3>Catering</h3>
+          <p>Bring the Savore experience to your venue with our bespoke catering services.</p>
+          <a href="services.html" class="service-link">
+            Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Guests Say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "An absolutely transcendent dining experience. The attention to detail 
+            in every course was remarkable. This is what fine dining should be."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" 
+                 alt="Sarah Mitchell" class="testimonial-avatar">
+            <div class="testimonial-author-info">
+              <h4>Sarah Mitchell</h4>
+              <p>Food Critic, NY Times</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "We celebrated our anniversary here and it was perfect. The ambiance, 
+            the service, and most importantly, the food — all impeccable."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" 
+                 alt="James & Emily Carter" class="testimonial-avatar">
+            <div class="testimonial-author-info">
+              <h4>James & Emily Carter</h4>
+              <p>Regular Guests</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "The tasting menu was a journey of flavors. Each course built upon 
+            the last, creating a symphony of taste that I'll never forget."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" 
+                 alt="Priya Sharma" class="testimonial-avatar">
+            <div class="testimonial-author-info">
+              <h4>Priya Sharma</h4>
+              <p>Travel Blogger</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RESERVATION CTA
+       ============================================ -->
+  <section class="section reservation-section" id="reservation">
+    <div class="container">
+      <div class="reservation-grid">
+        <div class="reservation-info animate-on-scroll">
+          <span class="section-label">Reservations</span>
+          <h2>Book Your Table</h2>
+          <p>
+            Join us for an unforgettable evening. Whether it's a romantic dinner, 
+            a business meeting, or a celebration, we'll ensure every moment is perfect.
+          </p>
+          <p>
+            For parties larger than 8 or special requests, please contact us directly 
+            and our team will be delighted to assist you.
+          </p>
+
+          <div class="reservation-contact">
+            <div class="reservation-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <span>+91 99999 99999</span>
+            </div>
+            <div class="reservation-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>reservations@savore.com</span>
+            </div>
+            <div class="reservation-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>42 Culinary Avenue, Downtown</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reservation-form animate-on-scroll">
+          <form data-validate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 99999 99999" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="time">Time</label>
+                <select id="time" name="time" required>
+                  <option value="">Select Time</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="19:30">7:30 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                  <option value="20:30">8:30 PM</option>
+                  <option value="21:00">9:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Guests</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Number of Guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8 Guests</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="occasion">Occasion</label>
+                <select id="occasion" name="occasion">
+                  <option value="">Select Occasion</option>
+                  <option value="dinner">Casual Dinner</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="business">Business</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Special Requests</label>
+              <textarea id="message" name="message" placeholder="Any dietary restrictions or special requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Confirm Reservation</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Savore</a>
+          <p>
+            A minimal, elegant fine dining experience. 
+            Where every dish tells a story of passion and precision.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+            <li><a href="mailto:hello@savore.com">hello@savore.com</a></li>
+            <li><a href="contact.html">42 Culinary Avenue</a></li>
+            <li><a href="contact.html">Downtown, City 400001</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Savore Restaurant. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       WHATSAPP FLOATING BUTTON
+       ============================================ -->
+  <a href="https://wa.me/919999999999?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

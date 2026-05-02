@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ella Jennis Event Planning</title>
+    <meta name="description" content="Get in touch with Ella Jennis for luxury event planning services. Book a consultation today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">ELLA JENNIS</a>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="packages.html" class="nav-link">Packages</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="booking.html" class="nav-link">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-header-title"><span class="script">get in</span> TOUCH</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Contact</span>
+        </div>
+    </header>
+
+    <section class="section section-cream">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">Reach Out</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-description">We would love to hear about your vision. Reach out and let's start planning something beautiful.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="fade-in">
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">Phone</h3>
+                    <div class="contact-info-value">
+                        <a href="tel:+15551234567">+1 (555) 123-4567</a><br>
+                        <a href="tel:+15559876543">+1 (555) 987-6543</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">Email</h3>
+                    <div class="contact-info-value">
+                        <a href="mailto:hello@ellajennis.com">hello@ellajennis.com</a><br>
+                        <a href="mailto:bookings@ellajennis.com">bookings@ellajennis.com</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">WhatsApp</h3>
+                    <div class="contact-info-value">
+                        <a href="https://wa.me/15551234567" target="_blank">+1 (555) 123-4567</a><br>
+                        <span style="font-size: 0.85rem;">Available Mon-Sat, 9AM-7PM EST</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">Office</h3>
+                    <div class="contact-info-value">
+                        123 Elegance Avenue<br>
+                        Suite 500<br>
+                        New York, NY 10001
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">Hours</h3>
+                    <div class="contact-info-value">
+                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: By Appointment
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <h3 class="contact-info-label">Social</h3>
+                    <div class="contact-info-value">
+                        <a href="https://instagram.com/ellajennis" target="_blank">Instagram</a> | 
+                        <a href="https://pinterest.com/ellajennis" target="_blank">Pinterest</a> | 
+                        <a href="https://facebook.com/ellajennis" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fade-in">
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-input" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-input" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-input" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Event Type</label>
+                        <select class="form-select" name="eventType">
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message *</label>
+                        <textarea class="form-textarea" name="message" required placeholder="Tell us about your vision..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-filled" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cream" style="padding-top: 0;">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <p>123 Elegance Avenue, New York, NY 10001</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Google Maps integration placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="services.html" class="footer-link">Services</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="packages.html" class="footer-link">Packages</a>
+                <a href="testimonials.html" class="footer-link">Testimonials</a>
+            </div>
+            <div class="footer-cta">
+                <h3>READY FOR YOUR</h3>
+                <span class="script">dream day?</span>
+                <a href="booking.html" class="btn btn-light">Book Now</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/15551234567?text=Hello%20Ella%20Jennis" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

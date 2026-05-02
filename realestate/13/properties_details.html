@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Horizon Villa - Beverly Hills | Parabot Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Hero Gallery */
+        .property-gallery {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .property-gallery {
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 250px 250px;
+            }
+
+            .hero-img-main {
+                grid-row: 1 / -1;
+            }
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .hero-img-main {
+            height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-img-main {
+                height: 100%;
+            }
+        }
+
+        /* Main Content Layout */
+        .property-layout {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 5% 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        @media (min-width: 992px) {
+            .property-layout {
+                flex-direction: row;
+            }
+        }
+
+        /* Left Column: Property Info */
+        .property-details {
+            flex: 2;
+        }
+
+        .property-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .property-header h1 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .property-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .price-tag {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .meta-divider {
+            color: #ccc;
+        }
+
+        .property-description h3,
+        .amenities-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .property-description p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* Amenities Grid */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 500px) {
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .amenity-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        /* Right Column: Sticky Contact Sidebar */
+        .property-sidebar {
+            flex: 1;
+        }
+
+        .contact-card {
+            background-color: #fcfbf9;
+            border: 1px solid #eaeaea;
+            padding: 32px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .agent-profile {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .agent-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .agent-info h4 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .agent-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contact Form & Buttons */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            font-family: var(--font-body);
+            background: #fff;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Dedicated WhatsApp Sidebar Button */
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Parabot Estate</a></div>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html" style="font-weight: 500; border-bottom: 2px solid var(--accent);">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="property-gallery">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
+                alt="Main Exterior" class="gallery-img hero-img-main">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80"
+                alt="Living Room" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80"
+                alt="Kitchen" class="gallery-img">
+        </section>
+
+        <section class="property-layout">
+
+            <div class="property-details">
+
+                <div class="property-header">
+                    <h1>The Horizon Villa</h1>
+                    <div class="property-meta">
+                        <span class="price-tag">$8,500,000</span>
+                        <span class="meta-divider">|</span>
+                        <span>Beverly Hills, CA 90210</span>
+                        <span class="meta-divider">|</span>
+                        <span>5 Beds</span>
+                        <span class="meta-divider">|</span>
+                        <span>6 Baths</span>
+                        <span class="meta-divider">|</span>
+                        <span>7,200 SqFt</span>
+                    </div>
+                </div>
+
+                <div class="property-description">
+                    <h3>About this property</h3>
+                    <p>Situated in the prestigious enclaves of Beverly Hills, The Horizon Villa is a masterpiece of
+                        modern architecture. Designed by award-winning architects, this estate offers panoramic views of
+                        the city skyline and the Pacific Ocean.</p>
+                    <p>Floor-to-ceiling glass walls disappear to seamlessly blend indoor and outdoor living. The gourmet
+                        chef's kitchen features imported Italian marble and state-of-the-art appliances, flowing
+                        perfectly into the expansive living and dining areas.</p>
+                    <p>The primary suite is a sanctuary unto itself, featuring a private wraparound terrace, dual
+                        spa-like bathrooms, and bespoke walk-in wardrobes. Outside, the zero-edge infinity pool and
+                        meticulously landscaped grounds provide the ultimate setting for lavish entertaining.</p>
+                </div>
+
+                <div class="amenities-section">
+                    <h3>Premium Amenities</h3>
+                    <div class="amenities-grid">
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Zero-edge Infinity Pool
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Smart Home Automation
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Gourmet Chef's Kitchen
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            12-Seat Home Theater
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Climate-Controlled Wine Cellar
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            4-Car Gallery Garage
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Private Gym & Spa
+                        </div>
+                        <div class="amenity-item">
+                            <svg class="amenity-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Panoramic Ocean Views
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="property-sidebar">
+                <div class="contact-card">
+                    <div class="agent-profile">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                            alt="Agent Portrait" class="agent-img">
+                        <div class="agent-info">
+                            <h4>Michael Sterling</h4>
+                            <p>Lead Luxury Broker</p>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <textarea placeholder="I am interested in The Horizon Villa..." required></textarea>
+                        <button type="submit" class="btn-dark btn-full">Request Private Tour</button>
+                    </form>
+
+                    <div style="text-align: center; margin: 16px 0; color: var(--text-secondary); font-size: 14px;">— OR
+                        —</div>
+
+                    <a href="https://wa.me/919999999999?text=Hello%20Michael,%20I%20am%20interested%20in%20The%20Horizon%20Villa%20listed%20at%20$8,500,000.%20I%20would%20like%20to%20arrange%20a%20viewing."
+                        class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 21c-1.566 0-3.097-.394-4.444-1.144l-.318-.176-3.3.865.882-3.218-.193-.307a8.966 8.966 0 0 1-1.375-4.789c0-4.962 4.04-9.002 9.006-9.002 2.404 0 4.664.936 6.363 2.637 1.7 1.702 2.636 3.963 2.636 6.367 0 4.96-4.042 9.001-9.005 9.001zm-4.793-1.666c1.401.83 2.996 1.267 4.646 1.267 4.74 0 8.599-3.859 8.6-8.6-.001-2.298-.895-4.46-2.522-6.085-1.625-1.625-3.785-2.522-6.081-2.522-4.742 0-8.601 3.86-8.601 8.602 0 1.691.464 3.327 1.341 4.757l-1.037 3.783 3.866-1.013zm6.34-6.386c-.302-.152-1.789-.883-2.065-.985-.276-.101-.477-.152-.678.151-.201.303-.779.985-.954 1.187-.176.202-.352.227-.654.076-.302-.151-1.276-.47-2.433-1.503-.9-1.129-1.152-1.407-1.353-1.71-.201-.303-.021-.466.13-.618.135-.135.302-.353.453-.53.151-.176.201-.302.302-.504.1-.202.05-.378-.025-.53-.075-.151-.678-1.636-.928-2.241-.243-.589-.488-.509-.678-.518-.176-.008-.377-.008-.578-.008-.201 0-.528.076-.804.378-.276.303-1.055 1.034-1.055 2.52 0 1.487 1.08 2.925 1.231 3.126.151.202 2.13 3.253 5.158 4.558 2.052.885 2.766.96 3.696.808.931-.151 2.221-.908 2.533-1.785.312-.877.312-1.636.22-1.786-.092-.151-.343-.227-.645-.379z" />
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <div id="global-footer-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

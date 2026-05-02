@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Parabot Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Page Header */
+        .page-header {
+            padding: 80px 5% 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Alternating Service Blocks */
+        .service-block {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .service-block {
+                flex-direction: row;
+                gap: 100px;
+                padding: 100px 5%;
+            }
+
+            .service-block.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .service-img {
+            flex: 1;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-icon-svg {
+            width: 48px;
+            height: 48px;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .service-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-content p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        /* Process / Roadmap Section */
+        .process-bg {
+            background-color: #f9f8f6;
+            padding: 100px 5%;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: #E0E0E0;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .process-step h4 {
+            margin-bottom: 12px;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* CTA Section */
+        .services-cta {
+            padding: 100px 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Parabot Estate</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="services.html" style="font-weight: 500; border-bottom: 2px solid var(--accent);">Services</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Expertise</h1>
+            <p>From initial market analysis to the final closing signature, we provide a full-spectrum suite of luxury
+                real estate services tailored to the global elite.</p>
+        </section>
+
+        <section class="service-block">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
+                    alt="Luxury Home Acquisition">
+            </div>
+            <div class="service-content">
+                <svg class="service-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <h2>Property Acquisition</h2>
+                <p>Finding the perfect home is an art. We grant our clients exclusive access to off-market listings and
+                    pocket deals that never reach public portals. Our acquisition strategy focuses on long-term value,
+                    architectural integrity, and lifestyle compatibility.</p>
+                <a href="contact.html" class="btn-dark">Inquire about Buying</a>
+            </div>
+        </section>
+
+        <section class="service-block reverse">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                    alt="Editorial Property Marketing">
+            </div>
+            <div class="service-content">
+                <svg class="service-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+                </svg>
+                <h2>Strategic Disposition</h2>
+                <p>Selling a trophy estate requires more than a listing; it requires a narrative. We utilize high-end
+                    cinematography, editorial-grade photography, and a global PR network to position your property in
+                    front of the world's most qualified buyers.</p>
+                <a href="contact.html" class="btn-dark">Inquire about Selling</a>
+            </div>
+        </section>
+
+        <section class="service-block">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+                    alt="Property Management">
+            </div>
+            <div class="service-content">
+                <svg class="service-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                    </path>
+                </svg>
+                <h2>Asset Management</h2>
+                <p>Protecting your investment is our priority. Our bespoke property management services ensure that your
+                    estate is maintained to the highest standards, whether you are in residence or abroad. We handle
+                    everything from staffing to preventative maintenance with absolute discretion.</p>
+                <a href="contact.html" class="btn-dark">Manage my Estate</a>
+            </div>
+        </section>
+
+        <section class="process-bg">
+            <h2 style="text-align: center; font-size: 2.5rem;">Our Methodology</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="step-number">01</span>
+                    <h4>Consultation</h4>
+                    <p>Defining your unique goals, timeline, and privacy requirements.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">02</span>
+                    <h4>Intelligence</h4>
+                    <p>Deep-dive data analysis and off-market scouting for opportunities.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">03</span>
+                    <h4>Execution</h4>
+                    <p>Precision negotiation and editorial-grade asset positioning.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-number">04</span>
+                    <h4>Succession</h4>
+                    <p>Post-closing management and long-term portfolio growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-cta">
+            <h2>Experience Bespoke Service</h2>
+            <p>Our advisors are ready to craft a customized strategy for your real estate portfolio. Reach out for a
+                private consultation.</p>
+            <a href="contact.html" class="btn-dark" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        </section>
+    </main>
+
+    <div id="global-footer-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Parabot Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Story Section - Asymmetric Grid Mirroring Hero */
+        .story-section {
+            display: flex;
+            flex-direction: column;
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        @media (min-width: 992px) {
+            .story-section {
+                flex-direction: row-reverse;
+                /* Flip layout for visual variety */
+                align-items: center;
+            }
+        }
+
+        .story-content {
+            flex: 1;
+        }
+
+        .story-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .story-content p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Philosophy Section */
+        .philosophy-bg {
+            background-color: #f9f8f6;
+            padding: 100px 5%;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .philosophy-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .phil-card {
+            text-align: center;
+        }
+
+        .phil-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 24px;
+            color: var(--accent);
+        }
+
+        .phil-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .phil-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        @media (min-width: 600px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            margin-bottom: 16px;
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+        }
+
+        .team-member:hover .team-img {
+            filter: grayscale(0%);
+        }
+
+        .team-member h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .team-member p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Parabot Estate</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="about.html" style="font-weight: 500; border-bottom: 2px solid var(--accent);">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="story-section">
+            <div class="hero-images">
+                <div class="img-col col-2 mt-shift">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+                        alt="Founder Portrait">
+                </div>
+            </div>
+            <div class="story-content">
+                <h1>Redefining the<br>art of brokerage.</h1>
+                <p>Founded in 2012, Parabot Estate was born from a simple observation: the world’s most extraordinary
+                    homes required a more sophisticated approach to storytelling and sales.</p>
+                <p>We are not just real estate agents; we are curators of lifestyle. Our team combines deep market
+                    intelligence with an editorial aesthetic to showcase properties as the works of art they truly are.
+                </p>
+                <p>With over $4B in career sales, we remain a boutique firm by choice, ensuring every client receives
+                    the undivided attention and discretion they deserve.</p>
+            </div>
+        </section>
+
+        <section class="philosophy-bg">
+            <div class="philosophy-grid">
+                <div class="phil-card">
+                    <svg class="phil-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                        </path>
+                    </svg>
+                    <h3>Absolute Discretion</h3>
+                    <p>We operate with the highest level of privacy, representing high-profile individuals with total
+                        confidentiality.</p>
+                </div>
+                <div class="phil-card">
+                    <svg class="phil-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <h3>Global Intelligence</h3>
+                    <p>Our data-driven insights allow us to predict market shifts before they happen, giving our clients
+                        a distinct edge.</p>
+                </div>
+                <div class="phil-card">
+                    <svg class="phil-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                        </path>
+                    </svg>
+                    <h3>Editorial Vision</h3>
+                    <p>We utilize world-class cinematography and photography to transform listings into compelling
+                        narratives.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 style="text-align: center; font-size: 2.5rem;">The Leadership</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+                        class="team-img" alt="Founder">
+                    <h4>Michael Sterling</h4>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                        class="team-img" alt="Partner">
+                    <h4>Elena Vance</h4>
+                    <p>Managing Partner</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+                        class="team-img" alt="Director">
+                    <h4>Julian Rhodes</h4>
+                    <p>Director of Investments</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+                        class="team-img" alt="Consultant">
+                    <h4>Sofia Chen</h4>
+                    <p>Head of Global Relocation</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 100px 5%; text-align: center; border-top: 1px solid #eee;">
+            <h2 style="font-size: 2rem; margin-bottom: 24px;">Experience the difference.</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px;">Ready to begin your property
+                journey? Connect with a Parabot Estate advisor today for a private consultation.</p>
+            <a href="contact.html" class="btn-dark" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        </section>
+    </main>
+
+    <div id="global-footer-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
